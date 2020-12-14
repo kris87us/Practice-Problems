@@ -1,7 +1,6 @@
 package learn;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Scanner;
 
 public class CommonTwoCB {
     public static int commonTwo(String[] a, String[] b) {
@@ -14,5 +13,9 @@ public class CommonTwoCB {
 
     public static void main(String[] args) {
         commonTwo(new String[]{"a"}, new String[]{"b"});
+        Scanner scan = new Scanner(System.in);
+        int i = scan.nextInt();
+        String s = scan.nextLine();
+        double d = scan.nextDouble();
     }
 }
