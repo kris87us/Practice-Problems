@@ -9,23 +9,31 @@ public class JavaLearn {
         int people = 5;
         int sum = 0;
 
-        for(int i = 0; i < num; i++){
-            people = (int) Math.floor(people/2);
+        for (int i = 0; i < num; i++) {
+            people = (int) Math.floor(people / 2);
             sum += people;
             people *= 3;
         }
-        System.out.println(isAnagram( "madam", "adamm"));
-        String s = "He is a very very good boy, isn't he?";
-        String[] split = s.split("[A-Za-z !,?._'@]+");
-        System.out.println(split.length);
-        for (String each: split) {
-            System.out.println(each);
+        System.out.println(destCity(Arrays.asList(Arrays.asList("London", "New York"), Arrays.asList("New York", "Lima"), Arrays.asList("Lima", "Sau Paulo"))));
+    }
+
+    public static String destCity(List<List<String>> paths) {
+        if (paths == null || paths.size() == 0) return "";
+        Map<String, String> map = new HashMap<>();
+        for (List<String> path : paths) {
+            map.put(path.get(0), path.get(1));
         }
+        for (String city : map.values()) {
+            if (!map.containsKey(city)) {
+                return city;
+            }
+        }
+        return "";
     }
 
     public static String reverse(String s) {
         StringBuilder string = new StringBuilder();
-        for (int i=s.length() - 1; i>=0 ; i--) {
+        for (int i = s.length() - 1; i >= 0; i--) {
             string.append(s.charAt(i));
         }
         return string.toString();
@@ -50,20 +58,20 @@ public class JavaLearn {
         // Complete the function
         // 'smallest' must be the lexicographically smallest substring of length 'k'
         // 'largest' must be the lexicographically largest substring of length 'k'
-        SortedSet<String> sets=new TreeSet<String>();
-        for(int i=0;i<=s.length()-k;i++){
-            sets.add(s.substring(i,i+k));
+        SortedSet<String> sets = new TreeSet<String>();
+        for (int i = 0; i <= s.length() - k; i++) {
+            sets.add(s.substring(i, i + k));
         }
         return sets.first() + "\n" + sets.last();
     }
 
-    public static int[] bubbleSortArray(int[] arr){
+    public static int[] bubbleSortArray(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = arr.length - 1; j > 0; j--) {
                 if (arr[j - 1] > arr[j]) {
                     int temp = arr[j];
-                    arr[j] = arr[j-1];
-                    arr[j-1] = temp;
+                    arr[j] = arr[j - 1];
+                    arr[j - 1] = temp;
                 }
             }
         }

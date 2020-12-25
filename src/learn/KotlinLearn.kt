@@ -1,11 +1,144 @@
 package learn
 
-import kotlin.math.roundToInt
 import kotlin.math.min
+import kotlin.math.roundToInt
 
+class ParkingSystem(var big: Int, var medium: Int, var small: Int) {
+    fun addCar(carType: Int): Boolean {
+        return if (carType == 1 && big > 0) {
+            big--
+            true
+        } else if (carType == 2 && this.medium > 0) {
+            medium--
+            true
+        } else if (carType == 3 && this.small > 0) {
+            small--
+            true
+        } else {
+            false
+        }
+    }
+}
 
 fun main(args: Array<String>) {
-    println(firstDuplicate(mutableListOf<Int>(2, 1, 3, 5, 3, 2)))
+    println(kaprekarNumbers(1, 100))
+}
+
+fun kaprekarNumbers(p: Int, q: Int): Unit {
+    var kaprekarFound : Boolean = false
+    for (n in p..q) {
+        val sq : Long = n.toLong() * n.toLong()
+        val strSquare = sq.toString()
+        var left = strSquare.substring(0, strSquare.length/2)
+        if (left.isEmpty) left = "0"
+        val right = strSquare.substring(strSquare.length/2)
+        println("$n | $strSquare | $left | $right | ${left.toInt() + right.toInt()} | ==n ${left.toInt() + right.toInt() == n}")
+        if (left.toInt() + right.toInt() == n) {
+            kaprekarFound = true
+            print("$n ")
+        }
+    }
+    if (!kaprekarFound) println("INVALID RANGE")
+}
+
+fun subtractProductAndSum(n: Int): Int {
+    var product = 1
+    var sum = 0
+    var num = n
+    while (num > 0) {
+        var remainder = num % 10
+        sum += remainder
+        product *= remainder
+        num = num / 10
+    }
+    return product - sum
+}
+
+fun toLowerCase(str: String): String {
+    val result = CharArray(str.length)
+    for ((index, s) in str.withIndex()) {
+        if (s >= 65.toChar() && s < 90.toChar()) {
+            result[index] = s + 32
+        } else {
+            result[index] = s
+        }
+    }
+    return String(result)
+}
+
+fun numTeams(rating: IntArray): Int {
+    var count = 0
+    var i = 0
+    while (i >= 0 && i < rating.size - 2) {
+        var j = i+1
+        while (j > i && j < rating.size - 1) {
+            var k = j+1
+            while (k > j && k < rating.size) {
+                if ((rating[i] < rating[j] && rating[i] < rating[k] && rating[j] < rating[k]) ||
+                    (rating[i] > rating[j] && rating[i] > rating[k] && rating[j] > rating[k])) {
+                    count++
+                }
+                k++
+            }
+            j++
+        }
+        i++
+    }
+    return count
+}
+
+fun xorOperation(n: Int, start: Int): Int {
+    var i = 0
+    var xorNum = 0
+    while (i < n) {
+        xorNum = xorNum.xor(start + 2*i)
+    }
+    return xorNum
+}
+
+fun arrayStringsAreEqual(word1: Array<String>, word2: Array<String>): Boolean {
+    if (word1.joinToString("") == word2.joinToString("")) return true
+    return false
+}
+
+fun restoreString(s: String, indices: IntArray): String {
+    var result = CharArray(indices.size)
+    for((i, n) in indices.withIndex()) {
+        result[n] = s[i]
+    }
+    return result.joinToString("")
+}
+
+fun smallerNumbersThanCurrent(nums: IntArray): IntArray {
+    var i = 0
+    val result = IntArray(nums.size)
+
+    while (i < nums.size) {
+        var count = 0
+        var j = 0
+        while (j < nums.size) {
+            if (i != j && nums[j] < nums[i]) {
+                count++
+            }
+            j++
+        }
+        result[i] = count
+        i++
+    }
+    return result
+}
+
+fun checkIfExist(arr: IntArray): Boolean {
+    val map = mutableMapOf<Int, Int>()
+    for ((i, a) in arr.withIndex()) {
+        if (map.containsKey(a*2)) {
+            return true
+        } else if (map.containsKey(a/2) && a % 2 == 0) {
+            return true
+        }
+        map[a] = i
+    }
+    return false
 }
 
 fun firstNotRepeatingCharacter(s: String): Char {
