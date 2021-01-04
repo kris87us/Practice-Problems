@@ -1,7 +1,9 @@
 package learn
 
+import java.util.*
 import kotlin.math.min
 import kotlin.math.roundToInt
+
 
 class ParkingSystem(var big: Int, var medium: Int, var small: Int) {
     fun addCar(carType: Int): Boolean {
@@ -20,18 +22,136 @@ class ParkingSystem(var big: Int, var medium: Int, var small: Int) {
     }
 }
 
-fun main(args: Array<String>) {
-    println(kaprekarNumbers(1, 100))
+fun main() {
+    maximum69Number(9669)
 }
 
-fun kaprekarNumbers(p: Int, q: Int): Unit {
-    var kaprekarFound : Boolean = false
+class ListNode(var `val`: Int) {
+    var next: ListNode? = null
+}
+
+fun deleteNode(node: ListNode?) {
+    node?.`val` = node?.next?.`val`!!
+    node.next = node.next?.next
+}
+
+fun middleNode(head: ListNode?): ListNode? {
+    var arr = Array<ListNode?>(100) { null }
+    var lHead = head
+    var i = 0
+    while (lHead?.next != null) {
+        arr[i] = lHead
+        lHead = lHead.next
+        i++
+    }
+    return arr[i / 2]
+}
+
+fun maximum69Number(num: Int): Int {
+    val strNum = num.toString().toCharArray()
+    for ((i, n) in strNum.withIndex()) {
+        if (n == '6') {
+            strNum[i] = '9'
+            break
+        }
+    }
+    return strNum.joinToString("").toInt()
+}
+
+fun halvesAreAlike(s: String): Boolean {
+    val vowels = listOf('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U')
+    val splitArr = s.chunked(s.length / 2)
+    val left = splitArr[0].count { it in vowels }
+    val right = splitArr[1].count { it in vowels }
+    return left == right
+}
+
+fun uniqueMorseRepresentations(words: Array<String>): Int {
+    val morse = listOf(
+        ".-",
+        "-...",
+        "-.-.",
+        "-..",
+        ".",
+        "..-.",
+        "--.",
+        "....",
+        "..",
+        ".---",
+        "-.-",
+        ".-..",
+        "--",
+        "-.",
+        "---",
+        ".--.",
+        "--.-",
+        ".-.",
+        "...",
+        "-",
+        "..-",
+        "...-",
+        ".--",
+        "-..-",
+        "-.--",
+        "--.."
+    )
+    val list = mutableListOf<String>()
+    for (word in words) {
+        val str = StringBuilder()
+        for (s in word) {
+            str.append(morse[s.toInt() - 96 - 1])
+        }
+        list.add(str.toString())
+    }
+    return list.distinct().count()
+}
+
+fun canFormArray(arr: IntArray, pieces: Array<IntArray>): Boolean {
+    val flat = pieces.flatMap { it.asList() }.toIntArray().sort()
+    if (pieces.size > 1 && pieces.size <= arr.size) {
+        return flat == arr.sort()
+    }
+    return false
+}
+
+fun createTargetArray(nums: IntArray, index: IntArray): IntArray {
+    var target = mutableListOf<Int>()
+    var i = 0
+    while (i < nums.size) {
+        target.add(index[i], nums[i])
+        i++
+    }
+    return target.stream().mapToInt { it }.toArray()
+}
+
+fun nextGreaterElement(findNums: IntArray, nums: IntArray): IntArray? {
+    val map: MutableMap<Int, Int> = HashMap() // map from x to next greater element of x
+    val stack = Stack<Int>()
+    for (num in nums) {
+        while (!stack.isEmpty() && stack.peek() < num) map[stack.pop()] = num
+        stack.push(num)
+    }
+    for (i in findNums.indices) findNums[i] = map.getOrDefault(findNums[i], -1)
+    return findNums
+}
+
+fun gcd(a: Int, b: Int): Int {
+    if (b == 0) return a
+    return gcd(b, a % b)
+}
+
+fun lcm(a: Int, b: Int): Int {
+    return a / gcd(a, b) * b
+}
+
+fun kaprekarNumbers(p: Int, q: Int) {
+    var kaprekarFound = false
     for (n in p..q) {
-        val sq : Long = n.toLong() * n.toLong()
+        val sq: Long = n.toLong() * n.toLong()
         val strSquare = sq.toString()
-        var left = strSquare.substring(0, strSquare.length/2)
+        var left = strSquare.substring(0, strSquare.length / 2)
         if (left.isEmpty) left = "0"
-        val right = strSquare.substring(strSquare.length/2)
+        val right = strSquare.substring(strSquare.length / 2)
         println("$n | $strSquare | $left | $right | ${left.toInt() + right.toInt()} | ==n ${left.toInt() + right.toInt() == n}")
         if (left.toInt() + right.toInt() == n) {
             kaprekarFound = true
@@ -70,12 +190,13 @@ fun numTeams(rating: IntArray): Int {
     var count = 0
     var i = 0
     while (i >= 0 && i < rating.size - 2) {
-        var j = i+1
+        var j = i + 1
         while (j > i && j < rating.size - 1) {
-            var k = j+1
+            var k = j + 1
             while (k > j && k < rating.size) {
                 if ((rating[i] < rating[j] && rating[i] < rating[k] && rating[j] < rating[k]) ||
-                    (rating[i] > rating[j] && rating[i] > rating[k] && rating[j] > rating[k])) {
+                    (rating[i] > rating[j] && rating[i] > rating[k] && rating[j] > rating[k])
+                ) {
                     count++
                 }
                 k++
@@ -91,7 +212,7 @@ fun xorOperation(n: Int, start: Int): Int {
     var i = 0
     var xorNum = 0
     while (i < n) {
-        xorNum = xorNum.xor(start + 2*i)
+        xorNum = xorNum.xor(start + 2 * i)
     }
     return xorNum
 }
@@ -103,7 +224,7 @@ fun arrayStringsAreEqual(word1: Array<String>, word2: Array<String>): Boolean {
 
 fun restoreString(s: String, indices: IntArray): String {
     var result = CharArray(indices.size)
-    for((i, n) in indices.withIndex()) {
+    for ((i, n) in indices.withIndex()) {
         result[n] = s[i]
     }
     return result.joinToString("")
@@ -131,9 +252,9 @@ fun smallerNumbersThanCurrent(nums: IntArray): IntArray {
 fun checkIfExist(arr: IntArray): Boolean {
     val map = mutableMapOf<Int, Int>()
     for ((i, a) in arr.withIndex()) {
-        if (map.containsKey(a*2)) {
+        if (map.containsKey(a * 2)) {
             return true
-        } else if (map.containsKey(a/2) && a % 2 == 0) {
+        } else if (map.containsKey(a / 2) && a % 2 == 0) {
             return true
         }
         map[a] = i
@@ -158,8 +279,8 @@ fun firstNotRepeatingCharacter(s: String): Char {
 fun firstDuplicate(a: MutableList<Int>): Int {
     var min = -1
     var i = 0
-    var countList = IntArray(a.size + 1) {it -> it}
-    while ( i < a.size ) {
+    var countList = IntArray(a.size + 1) { it -> it }
+    while (i < a.size) {
         if (countList[a[i]] == 0) {
             countList[a[i]]++
         } else {
