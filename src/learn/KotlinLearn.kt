@@ -23,16 +23,169 @@ class ParkingSystem(var big: Int, var medium: Int, var small: Int) {
 }
 
 fun main() {
-    maximum69Number(9669)
+    println(groupThePeople(intArrayOf(3, 3, 3, 3, 3, 1, 3)))
+}
+
+fun findDisappearedNumbers(nums: IntArray): List<Int> {
+    var result = mutableListOf<Int>()
+    var arr = IntArray(nums.size + 1)
+//    for (n in 1..nums.size) {
+//        if (n in nums) {
+//            continue
+//        } else {
+//            result.add(n)
+//        }
+//    }
+    var i = 0
+    while (i < nums.size) {
+        arr[nums[i]] = nums[i]
+        i++
+    }
+
+    var j = 1
+    while (j < arr.size) {
+        if (arr[j] == 0) result.add(j)
+    }
+    return result
+}
+
+fun dailyTemperatures(T: IntArray): IntArray {
+    var stack = Stack<Int>()
+    var result = IntArray(T.size)
+    var i = 0
+    while (i < T.size) {
+        while (!stack.empty() && T[i] > T[stack.peek()]) {
+           var id = stack.pop()
+            result[id] = i - id
+        }
+        stack.push(i)
+        i++
+    }
+    return result
+}
+
+fun groupThePeople(gz: IntArray): List<List<Int?>?>? {
+    val res = mutableListOf<MutableList<Int>>()
+    val groups: MutableMap<Int, MutableList<Int>> = HashMap()
+    for (i in gz.indices) {
+        val list = groups.computeIfAbsent(gz[i]) { _ -> mutableListOf() }
+        list.add(i)
+        if (list.size == gz[i]) {
+            res.add(list)
+            groups[gz[i]] = mutableListOf()
+        }
+    }
+    return res
+}
+
+fun thirdMax(nums: IntArray): Int {
+//    if (nums.size <=2) return nums.max()!!
+//
+//    var list = nums.distinct().sorted()
+//    var max = list.max()!!
+//    var max_index = list.indexOf(max)
+//
+//    return list[max_index - 2]
+
+    var treeSet = TreeSet<Int>()
+
+    for (n in nums) {
+        treeSet.add(n)
+    }
+    if (treeSet.size <= 2) return treeSet.last()
+
+    // For Third-max, remove two last elements
+    treeSet.remove(treeSet.last())
+    treeSet.remove(treeSet.last())
+
+    return treeSet.last()
+}
+
+fun missingNumber(nums: IntArray): Int {
+    var map = mutableMapOf<Int, Int>()
+    for (n in 0..nums.size) {
+        if (n in nums) {
+            map.put(n, 1)
+        } else map.put(n, 0)
+    }
+    return map.filterValues { it == 0 }.keys.first()
+}
+
+fun isSubsequence(s: String, t: String): Boolean {
+    var tee = t
+    for (ch in s) {
+        var index = tee.indexOf(ch)
+        if (index < 0) return false
+        tee = tee.substring(index + 1)
+    }
+    return true
+}
+
+fun heightChecker(heights: IntArray): Int {
+    var newArr = heights.clone().sortedArray()
+    var count = 0
+    var i = 0
+    while (i < newArr.size) {
+        if (newArr[i] != heights[i]) {
+            count++
+        }
+        i++
+    }
+    return count
 }
 
 class ListNode(var `val`: Int) {
     var next: ListNode? = null
 }
 
+fun fibonacci(n: Int): Int {
+
+    if (n <= 1) return n
+    return fibonacci(n - 2) + fibonacci(n - 1)
+
+}
+
+fun mergeTwoLinkedLists(list1: ListNode, list2: ListNode) {
+
+}
+
 fun deleteNode(node: ListNode?) {
     node?.`val` = node?.next?.`val`!!
     node.next = node.next?.next
+}
+
+fun isPowerOfFour(n: Int): Boolean {
+    // Can solve using log but won't be accepted in interview
+    // n = 4^x
+    // log n = log (4^x)
+    // log n / log 4 = x
+
+    // bit manipulation
+    return n > 0 && (n.and(n - 1)) == 0 && (n.and(0x55555555)) != 0
+}
+
+fun lengthOfLongestSubstring(s: String): Int {
+    var i = 0
+    // Use HashSet
+    return 0
+}
+
+fun getIntersectionNode(headA: ListNode?, headB: ListNode?): ListNode? {
+    var new = ListNode(-1)
+    var hashTable = HashSet<ListNode>()
+    var lHeadA = headA
+    var lHeadB = headB
+    if (lHeadA == null || lHeadB == null) return null
+
+    while (lHeadA?.next != null && lHeadB?.next != null) {
+        if (hashTable.contains(lHeadA)) {
+            new.next = lHeadB?.next
+            return new.next
+        }
+        lHeadA = lHeadA?.next
+        lHeadB = lHeadB?.next
+    }
+    return null
 }
 
 fun middleNode(head: ListNode?): ListNode? {
@@ -150,7 +303,7 @@ fun kaprekarNumbers(p: Int, q: Int) {
         val sq: Long = n.toLong() * n.toLong()
         val strSquare = sq.toString()
         var left = strSquare.substring(0, strSquare.length / 2)
-        if (left.isEmpty) left = "0"
+        if (left.isEmpty()) left = "0"
         val right = strSquare.substring(strSquare.length / 2)
         println("$n | $strSquare | $left | $right | ${left.toInt() + right.toInt()} | ==n ${left.toInt() + right.toInt() == n}")
         if (left.toInt() + right.toInt() == n) {

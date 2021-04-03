@@ -33,6 +33,7 @@ public class JavaLearn {
 
     public static String reverse(String s) {
         StringBuilder string = new StringBuilder();
+        List<String> f = new ArrayList<>();
         for (int i = s.length() - 1; i >= 0; i--) {
             string.append(s.charAt(i));
         }
