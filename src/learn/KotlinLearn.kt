@@ -1,9 +1,15 @@
 package learn
 
+import models.ListNode
 import java.util.*
 import kotlin.math.min
 import kotlin.math.roundToInt
 
+fun main() {
+    var sum = 9 + 1
+
+    println(sum)
+}
 
 class ParkingSystem(var big: Int, var medium: Int, var small: Int) {
     fun addCar(carType: Int): Boolean {
@@ -20,10 +26,6 @@ class ParkingSystem(var big: Int, var medium: Int, var small: Int) {
             false
         }
     }
-}
-
-fun main() {
-    println(groupThePeople(intArrayOf(3, 3, 3, 3, 3, 1, 3)))
 }
 
 fun findDisappearedNumbers(nums: IntArray): List<Int> {
@@ -55,7 +57,7 @@ fun dailyTemperatures(T: IntArray): IntArray {
     var i = 0
     while (i < T.size) {
         while (!stack.empty() && T[i] > T[stack.peek()]) {
-           var id = stack.pop()
+            var id = stack.pop()
             result[id] = i - id
         }
         stack.push(i)
@@ -132,10 +134,6 @@ fun heightChecker(heights: IntArray): Int {
         i++
     }
     return count
-}
-
-class ListNode(var `val`: Int) {
-    var next: ListNode? = null
 }
 
 fun fibonacci(n: Int): Int {
@@ -221,32 +219,32 @@ fun halvesAreAlike(s: String): Boolean {
 
 fun uniqueMorseRepresentations(words: Array<String>): Int {
     val morse = listOf(
-        ".-",
-        "-...",
-        "-.-.",
-        "-..",
-        ".",
-        "..-.",
-        "--.",
-        "....",
-        "..",
-        ".---",
-        "-.-",
-        ".-..",
-        "--",
-        "-.",
-        "---",
-        ".--.",
-        "--.-",
-        ".-.",
-        "...",
-        "-",
-        "..-",
-        "...-",
-        ".--",
-        "-..-",
-        "-.--",
-        "--.."
+            ".-",
+            "-...",
+            "-.-.",
+            "-..",
+            ".",
+            "..-.",
+            "--.",
+            "....",
+            "..",
+            ".---",
+            "-.-",
+            ".-..",
+            "--",
+            "-.",
+            "---",
+            ".--.",
+            "--.-",
+            ".-.",
+            "...",
+            "-",
+            "..-",
+            "...-",
+            ".--",
+            "-..-",
+            "-.--",
+            "--.."
     )
     val list = mutableListOf<String>()
     for (word in words) {
@@ -348,7 +346,7 @@ fun numTeams(rating: IntArray): Int {
             var k = j + 1
             while (k > j && k < rating.size) {
                 if ((rating[i] < rating[j] && rating[i] < rating[k] && rating[j] < rating[k]) ||
-                    (rating[i] > rating[j] && rating[i] > rating[k] && rating[j] > rating[k])
+                        (rating[i] > rating[j] && rating[i] > rating[k] && rating[j] > rating[k])
                 ) {
                     count++
                 }
