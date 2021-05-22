@@ -1,17 +1,14 @@
 package adventofcode2020
 
-import java.lang.Exception
-import java.util.ArrayList
 import java.nio.file.Files
-import kotlin.io.path.Path
+import java.nio.file.Path
+import java.util.*
 
-@kotlin.io.path.ExperimentalPathApi
 object day13 {
     @Throws(Exception::class)
     @JvmStatic
-    @kotlin.io.path.ExperimentalPathApi
     fun main(args: Array<String>) {
-        val input = Files.readAllLines(Path("/Users/gopaliyer/IdeaProjects/Practice/src/adventofcode2020/input/13.txt"))
+        val input = Files.readAllLines(Path.of("/Users/gopaliyer/IdeaProjects/Practice/src/adventofcode2020/input/13.txt"))
         val minimum = input[0].toLong()
         val ids: MutableList<Long> = ArrayList()
         for (id in input[1].split(",".toRegex()).toTypedArray()) {
