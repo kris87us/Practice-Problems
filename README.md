@@ -1,1 +1,1 @@
-# DSnA
+# Practice Problems
