@@ -1,4 +1,4 @@
-package learn
+package learn.tree
 
 import models.TreeNode
 

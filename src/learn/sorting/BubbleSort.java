@@ -2,6 +2,8 @@ package learn.sorting;
 
 import java.util.Arrays;
 
+// Time : O(n^2)
+// Space : O(1)
 public class BubbleSort {
     public static int[] bubbleSortArray(int[] arr) {
         for (int i = 0; i < arr.length; i++) {

@@ -1,4 +1,4 @@
-package learn
+package learn.tree
 
 import models.TreeNode
 import java.util.*
@@ -18,7 +18,7 @@ class BinaryTreePathsII {
 
     companion object {
         @JvmStatic
-        fun construct_paths(root: TreeNode?, path: String?, paths: LinkedList<String?>) {
+        fun constructPaths(root: TreeNode?, path: String?, paths: LinkedList<String?>) {
             var path = path
             if (root != null) {
                 path += root.`val`.toString()
@@ -26,8 +26,8 @@ class BinaryTreePathsII {
                     paths.add(path) // update paths
                 else {
                     path += "->" // extend the current path
-                    construct_paths(root.left, path, paths)
-                    construct_paths(root.right, path, paths)
+                    constructPaths(root.left, path, paths)
+                    constructPaths(root.right, path, paths)
                 }
             }
         }
@@ -35,7 +35,7 @@ class BinaryTreePathsII {
         @JvmStatic
         fun binaryTreePaths(root: TreeNode?): List<String?> {
             val paths = LinkedList<String?>()
-            construct_paths(root, "", paths)
+            constructPaths(root, "", paths)
             return paths
         }
     }

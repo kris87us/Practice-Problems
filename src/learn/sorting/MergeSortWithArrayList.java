@@ -2,30 +2,31 @@ package learn.sorting;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
-import static helper.Helper.convertIntegerListToArray;
-// Time : O(nlog n)
-// Space : O(n)
-public class MergeSort {
+public class MergeSortWithArrayList {
     public static void main(String[] args) {
-        int[] arr = new int[]{0, 1, 3, 2, 6, 5, 4};
-
-        System.out.print(Arrays.toString(mergeSort(arr)));
+        System.out.print(merge_sort(new ArrayList<>(Arrays.asList(0, 1, 3, 2))));
     }
 
-    private static int[] mergeSort(int[] arr) {
-        mergeSortHelper(arr, 0, arr.length - 1);
-        return arr;
+    static ArrayList<Integer> merge_sort(ArrayList<Integer> arr) {
+        // Write your code here.
+        int[] input = arr.stream().mapToInt(Integer::intValue).toArray();
+        merge_sort_helper(input, 0, input.length - 1);
+        ArrayList<Integer> result = new ArrayList<Integer>();
+
+        for (int j : input) {
+            result.add(j);
+        }
+        return result;
     }
 
-    private static void mergeSortHelper(int[] arr, int start, int end) {
+    private static void merge_sort_helper(int[] arr, int start, int end) {
         if (start >= end) return;
         // Divide in the middle
         int mid = (start + end) / 2;
         // Recursion Magic for solving smaller sub-arrays
-        mergeSortHelper(arr, start, mid);
-        mergeSortHelper(arr, mid + 1, end);
+        merge_sort_helper(arr, start, mid);
+        merge_sort_helper(arr, mid + 1, end);
 
         // Combine/Merge the resultant sub-arrays
         // HEAD of both the smaller sub-arrays

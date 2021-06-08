@@ -2,6 +2,8 @@ package learn.sorting;
 
 import java.util.Arrays;
 
+// Time : O(n^2)
+// Space : O(1)
 public class InsertionSort {
     public static void main(String[] args) {
         int[] arr = new int[]{3, 4, 5, 1, 2};

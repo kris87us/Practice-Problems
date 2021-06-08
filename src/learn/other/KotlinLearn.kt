@@ -731,7 +731,7 @@ fun repeatedString(s: String, n: Long): Long {
 fun cutTheSticks(arr: Array<Int>): Array<Int> {
     val mutableArr = arr.toMutableList()
 
-    var min = arr.min()
+    var min = arr.minOrNull()
     var sticksCut: Int
     var result = mutableListOf<Int>()
     while (true) {

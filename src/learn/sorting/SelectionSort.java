@@ -1,7 +1,8 @@
 package learn.sorting;
 
 import java.util.Arrays;
-
+// Time : O(n^2)
+// Space : O(1)
 public class SelectionSort {
     public static void main(String[] args) {
         System.out.print(Arrays.toString(selectionSort(new int[]{3, 4, 5, 1, 2})));

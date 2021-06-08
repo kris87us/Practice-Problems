@@ -3,9 +3,9 @@ package learn.heap;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.PriorityQueue;
-
+// Time : O(n log n)
+// Space: O(n)
 public class K_Closest_Elements {
-
     public static Point[] kClosestPoints(Point[] points, int k) {
         PriorityQueue<Point> pointsQ = new PriorityQueue<Point>(points.length, Comparator.comparing(Point::distanceToZero));
         Point[] result = new Point[k];
@@ -15,8 +15,6 @@ public class K_Closest_Elements {
         }
         return result;
     }
-
-
 
     public static class Point {
         private int x;
@@ -31,12 +29,5 @@ public class K_Closest_Elements {
         private int distanceToZero() {
             return (int) Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
         }
-    }
-
-    /**
-     * Driver code, do not change
-     **/
-    public static void main(String[] args) {
-
     }
 }

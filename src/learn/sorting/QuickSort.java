@@ -1,8 +1,12 @@
 package learn.sorting;
 
+import helper.Helper;
+
 import java.util.Arrays;
 import java.util.Random;
 
+// Time : O(nlog n) Worst Case: O(n^2)
+// Space : O(1)
 public class QuickSort {
     public static void main(String[] args) {
         int[] arr = new int[]{3, 4, 5, 1, 2};
@@ -24,23 +28,12 @@ public class QuickSort {
 
         int pivot = arr[start];
 
-        // Initialize two pointers at the HEAD.
-        int smaller = start;
-        int bigger = start;
-
-        for (bigger = start + 1; bigger <= end;) {
-            if (arr[bigger] < pivot) {
-                smaller++;
-                swap(arr, smaller, bigger);
-            }
-            bigger++;
-        }
-        // Swap pivot back to middle
-        swap(arr, smaller, start);
+        // Partitioning
+        int finalPivot = Helper.partition(arr, start, start + 1, pivot, start, end);
 
         // Recursion
-        quickSortHelper(arr, start, smaller - 1);
-        quickSortHelper(arr, smaller + 1, end);
+        quickSortHelper(arr, start, finalPivot - 1);
+        quickSortHelper(arr, finalPivot + 1, end);
 
         return arr;
     }
