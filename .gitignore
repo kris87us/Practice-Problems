@@ -5,6 +5,7 @@
 *.iml
 out
 gen
-/gradlew
-/gradlew.bat
 .gradle
+/build/
+/.idea/
+/.gradle/
