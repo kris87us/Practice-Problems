@@ -20,10 +20,10 @@ public class Kth_Largest_In_Array {
         if (start == end) return -1; // At-most 1 sub-problem
 
         int pivot = pickRandom(start, end);
-        swap(nums, start, pivot);
+        swapArray(nums, start, pivot);
         int newPivot = nums[start];
 
-        int finalPivot = partition(nums, start, start + 1, newPivot, start, end);
+        int finalPivot = twoWayPartition(nums, start, start + 1, newPivot, start, end);
 
         if (index == finalPivot) {
             return nums[index];

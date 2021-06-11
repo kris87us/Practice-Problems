@@ -1,5 +1,6 @@
 package helper;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -14,21 +15,53 @@ public class Helper {
         return rand.nextInt((end - start) + 1) + start;
     }
 
-    public static void swap(int[] nums, int start, int end) {
-        int temp = nums[start];
-        nums[start] = nums[end];
-        nums[end] = temp;
+    public static void swapArray(int[] nums, int i, int j) {
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
     }
 
-    public static int partition(int[] nums, int smallerIndex, int biggerIndex, int pivotElement, int start, int end) {
+    public static void swap2DArray(int[][] nums, int i, int j) {
+        int[] temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
+    }
+
+    public static void swapArrayList(ArrayList<Integer> nums, int a1, int a2) {
+        int temp = nums.get(a1);
+        nums.set(a1, nums.get(a2));
+        nums.set(a2, temp);
+    }
+
+    public static int twoWayPartition(int[] nums, int smallerIndex, int biggerIndex, int pivotElement, int start, int end) {
         for (int i = biggerIndex; i <= end;) {
             if (nums[i] <= pivotElement) {
                 smallerIndex++;
-                swap(nums, i, smallerIndex);
+                swapArray(nums, i, smallerIndex);
             }
             i++;
         }
-        swap(nums, smallerIndex, start);
+        swapArray(nums, smallerIndex, start);
+        return smallerIndex;
+    }
+
+    public static int threeWayPartition(int[] nums, int smallerIndex, int equalIndex, int biggerIndex, int pivotElement, int start, int end) {
+        for (int i = biggerIndex; i <= end;) {
+            if (nums[i] < pivotElement) {
+                smallerIndex++;
+                swapArray(nums, i, smallerIndex);
+            } else if (nums[i] == pivotElement) {
+                equalIndex++;
+                swapArray(nums, i, equalIndex);
+            }
+            i++;
+        }
+        //swap(nums, biggerIndex, equalIndex);
+        swapArray(nums, smallerIndex, start);
+        System.out.print("Start: "+start);
+        System.out.print("Smaller: "+ smallerIndex);
+        System.out.print("Bigger: "+ biggerIndex);
+        System.out.println("Equal: "+equalIndex);
         return smallerIndex;
     }
 }

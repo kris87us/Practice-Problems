@@ -2,7 +2,52 @@ package learn.sorting;
 
 import java.util.*;
 
+import static helper.Helper.*;
+
 public class Top_K_Frequent_Elements {
+
+    public static ArrayList<Integer> find_top_k_quickselect(ArrayList<Integer> arr, Integer k) {
+        int[] nums = arr.stream().mapToInt(Integer::intValue).toArray();
+        Map<Integer, Integer> map = new HashMap<>();
+        ArrayList<Integer> res = new ArrayList<>();
+        for (Integer n : arr) {
+            map.put(n, map.getOrDefault(n, 0) + 1);
+        }
+
+        int index = quickSelectHelper(nums, 0, nums.length - 1, nums.length - k, map);
+        for (int i = index; i <= nums.length - 1; i++) {
+            res.add(nums[i]);
+        }
+        return res;
+    }
+
+    private static int quickSelectHelper(int[] nums, int start, int end, int index, Map<Integer, Integer> map) {
+        if (start == end) return -1; // At-most 1 sub-problem
+
+        int pivot = pickRandom(start, end);
+        swapArray(nums, start, pivot);
+        int newPivot = map.get(nums[start]);
+
+        int smallerIndex = start;
+        int biggerIndex = start + 1;
+        for (int i = biggerIndex; i <= end;) {
+            if (map.get(nums[i]) <= newPivot) {
+                smallerIndex++;
+                swapArray(nums, i, smallerIndex);
+            }
+            i++;
+        }
+        swapArray(nums, smallerIndex, start);
+
+        if (index == smallerIndex) {
+            return index;
+        } else if (index < smallerIndex) {
+            return quickSelectHelper(nums, 0, smallerIndex - 1, index, map);
+        } else {
+            return quickSelectHelper(nums, smallerIndex + 1, end, index, map);
+        }
+    }
+
     public static ArrayList<Integer> find_top_k_frequent_elements(ArrayList<Integer> arr, Integer k) {
         // Write your code here.
         Map<Integer, Integer> map = new HashMap<>();
@@ -21,6 +66,6 @@ public class Top_K_Frequent_Elements {
     }
 
     public static void main(String[] args) {
-        System.out.print(find_top_k_frequent_elements(new ArrayList<Integer>(Arrays.asList(1, 2, 3, 2, 4, 3, 1, 5, 5, 5, 5, 5, 6, 4, 1)), 2));
+        System.out.print(find_top_k_quickselect(new ArrayList<Integer>(Arrays.asList(1, 2, 3, 2, 4, 3, 1, 5, 5, 5, 5, 5, 6, 4, 1)), 2));
     }
 }

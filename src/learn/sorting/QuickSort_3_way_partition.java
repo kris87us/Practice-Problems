@@ -7,9 +7,9 @@ import java.util.Random;
 
 // Time : O(nlog n) Worst Case: O(n^2)
 // Space : O(1)
-public class QuickSort {
+public class QuickSort_3_way_partition {
     public static void main(String[] args) {
-        int[] arr = new int[]{3, 4, 5, 1, 2};
+        int[] arr = new int[]{3, 4, 5, 5, 7,11, 5, 7, 8, 9, 1, 2};
         System.out.print(Arrays.toString(quickSort(arr)));
     }
 
@@ -29,10 +29,11 @@ public class QuickSort {
         int pivot = arr[start];
 
         // Partitioning
-        int finalPivot = Helper.twoWayPartition(arr, start, start + 1, pivot, start, end);
+        int finalPivot = Helper.threeWayPartition(arr, start, start,start + 1, pivot, start, end);
 
         // Recursion
         quickSortHelper(arr, start, finalPivot - 1);
+        quickSortHelper(arr, finalPivot, finalPivot - 1);
         quickSortHelper(arr, finalPivot + 1, end);
 
         return arr;
