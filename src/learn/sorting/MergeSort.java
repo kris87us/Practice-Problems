@@ -1,10 +1,7 @@
 package learn.sorting;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
-import static helper.Helper.convertIntegerListToArray;
 // Time : O(nlog n)
 // Space : O(n)
 public class MergeSort {

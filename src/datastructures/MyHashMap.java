@@ -3,11 +3,12 @@ package datastructures;
 import java.util.LinkedList;
 
 class MyHashMap {
-    LinkedList<Entry>[] buckets;
-    static int SIZE = 769;
+    final LinkedList<Entry>[] buckets;
+    static final int SIZE = 769;
 
     /** Initialize your data structure here. */
     public MyHashMap() {
+        //noinspection unchecked
         buckets = new LinkedList[SIZE];
     }
 
@@ -16,7 +17,7 @@ class MyHashMap {
         int bucket = key % SIZE;
         LinkedList<Entry> entries = buckets[bucket];
         if (entries == null) {
-            entries = new LinkedList<Entry>();
+            entries = new LinkedList<>();
         } else {
             for (Entry entry: entries) {
                 if (entry.key == key) {
@@ -67,7 +68,7 @@ class MyHashMap {
 }
 
 class Entry {
-    public int key;
+    public final int key;
     public int value;
 
     public Entry(int key, int value) {
@@ -75,12 +76,12 @@ class Entry {
         this.value = value;
     }
 }
-/**
- * Your MyHashMap object will be instantiated and called as such:
- * MyHashMap obj = new MyHashMap();
- * obj.put(key,value);
- * int param_2 = obj.get(key);
- * obj.remove(key);
+/*
+  Your MyHashMap object will be instantiated and called as such:
+  MyHashMap obj = new MyHashMap();
+  obj.put(key,value);
+  int param_2 = obj.get(key);
+  obj.remove(key);
  */
 
 

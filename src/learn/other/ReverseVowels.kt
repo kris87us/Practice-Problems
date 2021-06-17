@@ -2,7 +2,7 @@ package learn.other
 
 fun reverseVowels(s: String): String {
     val charArr = s.toCharArray()
-    val vowelSet = setOf<Char>('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U')
+    val vowelSet = setOf('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U')
     var i=0
     var j=charArr.size - 1
     while (i<j) {

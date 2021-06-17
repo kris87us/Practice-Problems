@@ -7,7 +7,7 @@ import java.util.PriorityQueue;
 // Space: O(n)
 public class K_Closest_Elements {
     public static Point[] kClosestPoints(Point[] points, int k) {
-        PriorityQueue<Point> pointsQ = new PriorityQueue<Point>(points.length, Comparator.comparing(Point::distanceToZero));
+        PriorityQueue<Point> pointsQ = new PriorityQueue<>(points.length, Comparator.comparing(Point::distanceToZero));
         Point[] result = new Point[k];
         pointsQ.addAll(Arrays.asList(points));
         for (int i = 0; i < k; i++) {

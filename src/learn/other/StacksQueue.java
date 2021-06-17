@@ -2,10 +2,11 @@ package learn.other;
 
 import java.util.*;
 
+@SuppressWarnings("unchecked")
 public class StacksQueue {
 
     // Write your code here.
-    LinkedList ds;
+    final LinkedList ds;
 
     StacksQueue() {
         ds = new LinkedList();

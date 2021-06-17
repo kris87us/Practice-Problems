@@ -13,8 +13,8 @@ public class MatchingStrings {
         int[] output = new int[queries.length];
         for (int i = 0; i < queries.length; i++) {
             int count = 0;
-            for (int j = 0; j < strings.length; j++) {
-                if (queries[i] == strings[j]) {
+            for (String string : strings) {
+                if (queries[i].equals(string)) {
                     count += 1;
                     output[i] = count;
                 }

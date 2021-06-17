@@ -2,7 +2,6 @@ package learn.other;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 public class ValidPalindrome {
     public static boolean isPalindrome(String s) {

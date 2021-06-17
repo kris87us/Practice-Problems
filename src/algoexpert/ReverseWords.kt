@@ -11,7 +11,7 @@ class ReverseWords {
         fun reverseWordsInString(string: String): String {
             // Write your code here.
             var start = 0
-            var words = mutableListOf<String>()
+            val words = mutableListOf<String>()
             for (ch in string) {
                 if (ch == ' ') {
                     words.add(string.substring(start, string.indexOf(ch) - 1))

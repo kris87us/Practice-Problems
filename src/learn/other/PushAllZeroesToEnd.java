@@ -1,7 +1,5 @@
 package learn.other;
 
-import java.util.Arrays;
-
 public class PushAllZeroesToEnd {
     public static void main(String[] args) {
         pushAllZeroes(new int[]{1, 2, 0, 4, 0, 6, 0});

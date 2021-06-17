@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class IntegerToRoman {
     public static String intToRoman(int num) {
-        Map<Integer, String> map = new HashMap();
+        Map<Integer, String> map = new HashMap<Integer, String>();
         map.put(1, "I"); map.put(5, "V"); map.put(10, "X");
         map.put(50, "L"); map.put(100, "C"); map.put(500, "D"); map.put(1000, "M");
         map.put(4, "IV"); map.put(9, "IX"); map.put(40, "XL"); map.put(90, "XC");
@@ -15,10 +15,9 @@ public class IntegerToRoman {
 
         // 58
 
-        StringBuffer sb = new StringBuffer();
-        for (int i=0; i<sequence.length; i++) {
-            int base = sequence[i]; // 50, 5
-
+        StringBuilder sb = new StringBuilder();
+        // 50, 5
+        for (int base : sequence) {
             while (num >= base) {
                 sb.append(map.get(base)); // sb = LV
                 num -= base; // 8-5=3

@@ -10,6 +10,7 @@ public class ProductSum {
         return productSumHelper(array, 1);
     }
 
+    @SuppressWarnings("unchecked")
     public static int productSumHelper(List<Object> array, int multiplier) {
         for (Object element : array) {
             if (element instanceof ArrayList) {

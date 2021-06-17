@@ -2,16 +2,18 @@ package learn.other
 
 import models.ListNode
 import java.util.*
+import kotlin.math.abs
+import kotlin.math.max
 import kotlin.math.min
 import kotlin.math.roundToInt
 
 fun main() {
-    var sum = 9 + 1
+    val sum = 9 + 1
 
     println(sum)
 }
 
-class ParkingSystem(var big: Int, var medium: Int, var small: Int) {
+class ParkingSystem(private var big: Int, private var medium: Int, private var small: Int) {
     fun addCar(carType: Int): Boolean {
         return if (carType == 1 && big > 0) {
             big--
@@ -29,8 +31,8 @@ class ParkingSystem(var big: Int, var medium: Int, var small: Int) {
 }
 
 fun findDisappearedNumbers(nums: IntArray): List<Int> {
-    var result = mutableListOf<Int>()
-    var arr = IntArray(nums.size + 1)
+    val result = mutableListOf<Int>()
+    val arr = IntArray(nums.size + 1)
 //    for (n in 1..nums.size) {
 //        if (n in nums) {
 //            continue
@@ -44,7 +46,7 @@ fun findDisappearedNumbers(nums: IntArray): List<Int> {
         i++
     }
 
-    var j = 1
+    val j = 1
     while (j < arr.size) {
         if (arr[j] == 0) result.add(j)
     }
@@ -52,12 +54,12 @@ fun findDisappearedNumbers(nums: IntArray): List<Int> {
 }
 
 fun dailyTemperatures(T: IntArray): IntArray {
-    var stack = Stack<Int>()
-    var result = IntArray(T.size)
+    val stack = Stack<Int>()
+    val result = IntArray(T.size)
     var i = 0
     while (i < T.size) {
         while (!stack.empty() && T[i] > T[stack.peek()]) {
-            var id = stack.pop()
+            val id = stack.pop()
             result[id] = i - id
         }
         stack.push(i)
@@ -66,11 +68,11 @@ fun dailyTemperatures(T: IntArray): IntArray {
     return result
 }
 
-fun groupThePeople(gz: IntArray): List<List<Int?>?>? {
+fun groupThePeople(gz: IntArray): List<List<Int?>?> {
     val res = mutableListOf<MutableList<Int>>()
     val groups: MutableMap<Int, MutableList<Int>> = HashMap()
     for (i in gz.indices) {
-        val list = groups.computeIfAbsent(gz[i]) { _ -> mutableListOf() }
+        val list = groups.computeIfAbsent(gz[i]) { mutableListOf() }
         list.add(i)
         if (list.size == gz[i]) {
             res.add(list)
@@ -89,7 +91,7 @@ fun thirdMax(nums: IntArray): Int {
 //
 //    return list[max_index - 2]
 
-    var treeSet = TreeSet<Int>()
+    val treeSet = TreeSet<Int>()
 
     for (n in nums) {
         treeSet.add(n)
@@ -104,11 +106,11 @@ fun thirdMax(nums: IntArray): Int {
 }
 
 fun missingNumber(nums: IntArray): Int {
-    var map = mutableMapOf<Int, Int>()
+    val map = mutableMapOf<Int, Int>()
     for (n in 0..nums.size) {
         if (n in nums) {
-            map.put(n, 1)
-        } else map.put(n, 0)
+            map[n] = 1
+        } else map[n] = 0
     }
     return map.filterValues { it == 0 }.keys.first()
 }
@@ -116,7 +118,7 @@ fun missingNumber(nums: IntArray): Int {
 fun isSubsequence(s: String, t: String): Boolean {
     var tee = t
     for (ch in s) {
-        var index = tee.indexOf(ch)
+        val index = tee.indexOf(ch)
         if (index < 0) return false
         tee = tee.substring(index + 1)
     }
@@ -124,7 +126,7 @@ fun isSubsequence(s: String, t: String): Boolean {
 }
 
 fun heightChecker(heights: IntArray): Int {
-    var newArr = heights.clone().sortedArray()
+    val newArr = heights.clone().sortedArray()
     var count = 0
     var i = 0
     while (i < newArr.size) {
@@ -169,25 +171,25 @@ fun lengthOfLongestSubstring(s: String): Int {
 }
 
 fun getIntersectionNode(headA: ListNode?, headB: ListNode?): ListNode? {
-    var new = ListNode(-1)
-    var hashTable = HashSet<ListNode>()
+    val new = ListNode(-1)
+    val hashTable = HashSet<ListNode>()
     var lHeadA = headA
     var lHeadB = headB
     if (lHeadA == null || lHeadB == null) return null
 
     while (lHeadA?.next != null && lHeadB?.next != null) {
         if (hashTable.contains(lHeadA)) {
-            new.next = lHeadB?.next
+            new.next = lHeadB.next
             return new.next
         }
-        lHeadA = lHeadA?.next
-        lHeadB = lHeadB?.next
+        lHeadA = lHeadA.next
+        lHeadB = lHeadB.next
     }
     return null
 }
 
 fun middleNode(head: ListNode?): ListNode? {
-    var arr = Array<ListNode?>(100) { null }
+    val arr = Array<ListNode?>(100) { null }
     var lHead = head
     var i = 0
     while (lHead?.next != null) {
@@ -250,7 +252,7 @@ fun uniqueMorseRepresentations(words: Array<String>): Int {
     for (word in words) {
         val str = StringBuilder()
         for (s in word) {
-            str.append(morse[s.toInt() - 96 - 1])
+            str.append(morse[s.code - 96 - 1])
         }
         list.add(str.toString())
     }
@@ -266,7 +268,7 @@ fun canFormArray(arr: IntArray, pieces: Array<IntArray>): Boolean {
 }
 
 fun createTargetArray(nums: IntArray, index: IntArray): IntArray {
-    var target = mutableListOf<Int>()
+    val target = mutableListOf<Int>()
     var i = 0
     while (i < nums.size) {
         target.add(index[i], nums[i])
@@ -275,7 +277,7 @@ fun createTargetArray(nums: IntArray, index: IntArray): IntArray {
     return target.stream().mapToInt { it }.toArray()
 }
 
-fun nextGreaterElement(findNums: IntArray, nums: IntArray): IntArray? {
+fun nextGreaterElement(findNums: IntArray, nums: IntArray): IntArray {
     val map: MutableMap<Int, Int> = HashMap() // map from x to next greater element of x
     val stack = Stack<Int>()
     for (num in nums) {
@@ -317,10 +319,10 @@ fun subtractProductAndSum(n: Int): Int {
     var sum = 0
     var num = n
     while (num > 0) {
-        var remainder = num % 10
+        val remainder = num % 10
         sum += remainder
         product *= remainder
-        num = num / 10
+        num /= 10
     }
     return product - sum
 }
@@ -360,7 +362,7 @@ fun numTeams(rating: IntArray): Int {
 }
 
 fun xorOperation(n: Int, start: Int): Int {
-    var i = 0
+    val i = 0
     var xorNum = 0
     while (i < n) {
         xorNum = xorNum.xor(start + 2 * i)
@@ -374,7 +376,7 @@ fun arrayStringsAreEqual(word1: Array<String>, word2: Array<String>): Boolean {
 }
 
 fun restoreString(s: String, indices: IntArray): String {
-    var result = CharArray(indices.size)
+    val result = CharArray(indices.size)
     for ((i, n) in indices.withIndex()) {
         result[n] = s[i]
     }
@@ -414,7 +416,7 @@ fun checkIfExist(arr: IntArray): Boolean {
 }
 
 fun firstNotRepeatingCharacter(s: String): Char {
-    var map = mutableMapOf<Char, Int>()
+    val map = mutableMapOf<Char, Int>()
     for (item in s) {
         map[item] = map.getOrDefault(item, 0) + 1
     }
@@ -430,7 +432,7 @@ fun firstNotRepeatingCharacter(s: String): Char {
 fun firstDuplicate(a: MutableList<Int>): Int {
     var min = -1
     var i = 0
-    var countList = IntArray(a.size + 1) { it -> it }
+    val countList = IntArray(a.size + 1) { it }
     while (i < a.size) {
         if (countList[a[i]] == 0) {
             countList[a[i]]++
@@ -444,9 +446,9 @@ fun firstDuplicate(a: MutableList<Int>): Int {
 }
 
 fun merge(nums1: IntArray, m: Int, nums2: IntArray, n: Int): Unit {
-    var i = 0
+    val i = 0
     while (i < nums2.size) {
-        var j = i
+        val j = i
         while (j < nums1.size) {
 
         }
@@ -463,7 +465,7 @@ fun duplicateZeros(arr: IntArray): Unit {
                 j--
             }
             if (i != arr.size - 1) {
-                arr[i + 1] = 0;
+                arr[i + 1] = 0
                 i++
             }
         }
@@ -482,7 +484,7 @@ fun makingAnagrams(s1: String, s2: String): Int {
         i++
         j++
     }
-    return temp.sumBy { it -> Math.abs(it) }
+    return temp.sumOf { it -> Math.abs(it) }
 }
 
 fun gemstones(arr: Array<String>): Int {
@@ -501,7 +503,7 @@ fun beautifulBinaryString(b: String): Int {
 }
 
 fun sortedSquares(nums: IntArray): IntArray {
-    var result = IntArray(nums.size)
+    val result = IntArray(nums.size)
     for ((i, n) in nums.withIndex()) {
         result[i] = n * n
     }
@@ -525,7 +527,7 @@ fun theLoveLetterMystery(s: String): Int {
     var j = s.length - 1
     var count = 0
     while (j - i >= 1) {
-        count += Math.abs(s[j].toInt() - s[i].toInt())
+        count += abs(s[j].code - s[i].code)
         j--
         i++
     }
@@ -546,13 +548,13 @@ fun pangrams(s: String): String {
 fun funnyString(s: String): String {
     val asciiList = mutableListOf<Int>()
     for (letter in s) {
-        asciiList.add(letter.toInt())
+        asciiList.add(letter.code)
     }
     val revAsciiList = asciiList.reversed()
     var i = 1
     while (i < asciiList.size) {
-        val minusOrig = Math.abs(asciiList[i] - asciiList[i - 1])
-        val minusRev = Math.abs(revAsciiList[i] - revAsciiList[i - 1])
+        val minusOrig = abs(asciiList[i] - asciiList[i - 1])
+        val minusRev = abs(revAsciiList[i] - revAsciiList[i - 1])
         if (minusOrig != minusRev) return "Not Funny"
         i++
     }
@@ -575,10 +577,10 @@ fun hackerrankInString(s: String): String {
 }
 
 fun permutationEquation(p: Array<Int>): Array<Int> {
-    var result = mutableListOf<Int>()
+    val result = mutableListOf<Int>()
 
     for (i in 1..p.size) {
-        var p1 = p.indexOf(i) + 1
+        val p1 = p.indexOf(i) + 1
         result.add(p.indexOf(p1) + 1)
     }
     result.forEach { println(it) }
@@ -611,7 +613,7 @@ fun howManyGames(p: Int, d: Int, m: Int, s: Int): Int {
     while (startingBudget >= priceOfFirst) {
         noOfGames++
         startingBudget -= priceOfFirst
-        priceOfFirst = Math.max(priceOfFirst - d, m)
+        priceOfFirst = max(priceOfFirst - d, m)
     }
     return noOfGames
 }
@@ -646,7 +648,7 @@ fun rightCircularArrayRotation(a: Array<Int>, k: Int, queries: Array<Int>): Arra
 
     val rotated = newArray.plus(partialRotated)
 
-    val result = Array<Int>(queries.size) { it -> it }
+    val result = Array(queries.size) { it }
     var j = 0
     for (query in queries) {
         result[j++] = rotated[query]
@@ -663,7 +665,7 @@ fun leftCircularArrayRotation(a: Array<Int>, k: Int, queries: Array<Int>): Array
         i++
     }
     val rotated = a.plus(newArray)
-    val result = Array<Int>(queries.size) { it -> it }
+    val result = Array(queries.size) { it }
     var j = 0
     for (query in queries) {
         result[j++] = rotated[query]
@@ -725,7 +727,7 @@ fun repeatedString(s: String, n: Long): Long {
         if (s[i] == 'a') count++
         i++
     }
-    return count.toLong()
+    return count
 }
 
 fun cutTheSticks(arr: Array<Int>): Array<Int> {
@@ -733,7 +735,7 @@ fun cutTheSticks(arr: Array<Int>): Array<Int> {
 
     var min = arr.minOrNull()
     var sticksCut: Int
-    var result = mutableListOf<Int>()
+    val result = mutableListOf<Int>()
     while (true) {
         sticksCut = 0
         for ((i, item) in mutableArr.withIndex()) {
@@ -753,7 +755,7 @@ fun cutTheSticks(arr: Array<Int>): Array<Int> {
 fun designerPdfViewer(h: Array<Int>, word: String): Int {
     var max = 0
     for (char in word) {
-        var height = h[(char - 96).toInt() - 1]
+        val height = h[(char - 96).code - 1]
         if (height > max) max = height
     }
     return max * word.length
@@ -766,8 +768,8 @@ fun saveThePrisoner(n: Int, m: Int, s: Int): Int {
 }
 
 fun solve(meal_cost: Double, tip_percent: Int, tax_percent: Int): Unit {
-    val tip = (meal_cost * tip_percent / 100).toDouble()
-    val tax = (meal_cost * tax_percent / 100).toDouble()
+    val tip = (meal_cost * tip_percent / 100)
+    val tax = (meal_cost * tax_percent / 100)
     val total = meal_cost + tip + tax
     println(total.roundToInt())
 }
@@ -806,7 +808,7 @@ fun reverseLocal(i: Int): Int {
 
 
 fun migratoryBirds(arr: Array<Int>): Int {
-    var map = mutableMapOf<Int, Int>()
+    val map = mutableMapOf<Int, Int>()
     val arr0 = mutableListOf<Int>()
     for (a in arr) {
         map[a] = map.getOrDefault(a, 0) + 1
@@ -814,7 +816,7 @@ fun migratoryBirds(arr: Array<Int>): Int {
     //val max = map.maxOf { it.value }
     var maxEntry: Map.Entry<Int, Int>? = null
     for (entry in map.entries) {
-        if (maxEntry == null || entry.value.compareTo(maxEntry.value) > 0) {
+        if (maxEntry == null || entry.value > maxEntry.value) {
             maxEntry = entry
         }
     }

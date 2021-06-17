@@ -46,10 +46,7 @@ public class JavaLearn {
         char[] arr2 = b.toLowerCase().toCharArray();
         Arrays.sort(arr1);
         Arrays.sort(arr2);
-        if (Arrays.equals(arr1, arr2)) {
-            return true;
-        }
-        return false;
+        return Arrays.equals(arr1, arr2);
     }
 
     public static String getSmallestAndLargest(String s, int k) {
@@ -59,7 +56,7 @@ public class JavaLearn {
         // Complete the function
         // 'smallest' must be the lexicographically smallest substring of length 'k'
         // 'largest' must be the lexicographically largest substring of length 'k'
-        SortedSet<String> sets = new TreeSet<String>();
+        SortedSet<String> sets = new TreeSet<>();
         for (int i = 0; i <= s.length() - k; i++) {
             sets.add(s.substring(i, i + k));
         }
@@ -67,7 +64,7 @@ public class JavaLearn {
     }
 
     public static Character firstNonRepeatedCharacter(String str) {
-        HashMap<Character, Integer> map = new HashMap<Character, Integer>();
+        HashMap<Character, Integer> map = new HashMap<>();
         for (Character s : str.toCharArray()) {
             map.put(s, map.getOrDefault(s, 0) + 1);
         }

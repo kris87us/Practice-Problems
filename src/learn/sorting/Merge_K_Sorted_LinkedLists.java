@@ -66,7 +66,7 @@ public class Merge_K_Sorted_LinkedLists {
     }
 
     static class SinglyLinkedListNode {
-        public int data;
+        public final int data;
         public SinglyLinkedListNode next;
 
         public SinglyLinkedListNode(int nodeData) {

@@ -11,7 +11,7 @@ public class Merge_K_Sorted_Lists {
     public static List<Integer> mergeKSortedLists(List<List<Integer>> lists, int k) {
         // WRITE YOUR BRILLIANT CODE HERE
         List<Integer> result = new ArrayList<>();
-        PriorityQueue<Element> heap = new PriorityQueue<Element>(k, Comparator.comparing((e -> e.val)));
+        PriorityQueue<Element> heap = new PriorityQueue<>(k, Comparator.comparing((e -> e.val)));
 
         // Add first element of each list to the HEAP
         for (List<Integer> list : lists) {
@@ -38,9 +38,9 @@ public class Merge_K_Sorted_Lists {
 }
 
 class Element {
-    int val;
-    List<Integer> fromArray;
-    int headIndex;
+    final int val;
+    final List<Integer> fromArray;
+    final int headIndex;
 
     public Element(int val, List<Integer> fromArray, int headIndex) {
         this.val = val;

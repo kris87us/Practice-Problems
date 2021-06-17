@@ -2,9 +2,10 @@ package datastructures;
 
 import java.util.Arrays;
 
+@SuppressWarnings("unchecked")
 public class MyStack<E> {
     private int size = 0;
-    private Object object[];
+    private Object[] object;
 
     public MyStack(E[] object) {
         this.object = new Object[10];

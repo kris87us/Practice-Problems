@@ -7,9 +7,9 @@ fun majorityElement(nums: IntArray): Int {
      **/
 
     /** HashMap solution **/
-    var map = mutableMapOf<Int, Int>()
+    val map = mutableMapOf<Int, Int>()
     for (n in nums) {
-        map.put(n, map.getOrDefault(n, 0) + 1)
+        map[n] = map.getOrDefault(n, 0) + 1
     }
     println(map)
     map.entries.forEach {

@@ -11,7 +11,6 @@ public class Kth_Largest_In_Stream {
 
     public static List<Integer> kth_largest_In_A_Stream_Using_Heap(int k, List<Integer> initial_stream, List<Integer> append_Stream) {
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
-        Queue<Integer> queue = new LinkedList<>();
 
         List<Integer> result = new ArrayList<>();
 
@@ -22,9 +21,7 @@ public class Kth_Largest_In_Stream {
         }
 
         // Add append_stream to queue
-        for (int m : append_Stream) {
-            queue.add(m);
-        }
+        Queue<Integer> queue = new LinkedList<>(append_Stream);
 
         while (!queue.isEmpty()) {
             minHeap.add(queue.remove());

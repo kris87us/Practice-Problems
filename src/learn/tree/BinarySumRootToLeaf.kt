@@ -13,7 +13,7 @@ class BinarySumRootToLeaf {
         fun calculateBinarySum(root: TreeNode?, current: Int): Int {
             if (root == null) return 0
 
-            var current = (current.shl(1)).or(root.`val`)
+            val current = (current.shl(1)).or(root.`val`)
 
             if (root.left == null && root.right == null) {
                 sum += current
@@ -25,6 +25,6 @@ class BinarySumRootToLeaf {
             return sum
         }
 
-        var sum = 0
+        private var sum = 0
     }
 }

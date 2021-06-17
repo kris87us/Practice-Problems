@@ -35,6 +35,7 @@ public class Merge_Sorted_Array_Into_Another {
         }
     }
 
+    @SuppressWarnings("unused")
     static void merge_one_into_another_InsertionSort(int[] arr1, int[] arr2) {
         // Write your code here.
         int i = 0;

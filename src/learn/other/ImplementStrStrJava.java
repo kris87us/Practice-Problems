@@ -6,7 +6,7 @@ public class ImplementStrStrJava {
         if (needle.length() > haystack.length()) return -1;
         if (needle.isEmpty()) return 0;
         for (int i = 0; i <= haystack.length() - needle.length(); i++) {
-            if (haystack.substring(i, i + needle.length()).equals(needle)) {
+            if (haystack.startsWith(needle, i)) {
                 return i;
             }
         }

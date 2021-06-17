@@ -1,5 +1,6 @@
 package learn.other
 
+import kotlin.math.abs
 import kotlin.math.pow
 
 // sqrt(x) = y
@@ -11,7 +12,7 @@ import kotlin.math.pow
 fun mySqrt(x: Int): Int {
     var prev = -1
     var new = 1
-    while (Math.abs(new.toDouble() - prev.toDouble()) > 1e-10) {
+    while (abs(new.toDouble() - prev.toDouble()) > 1e-10) {
         prev = new
         new = (prev.toDouble() - ((prev.toDouble().pow(2.0) - x))/(2.0 * prev.toDouble())).toInt()
     }

@@ -68,6 +68,6 @@ public class Top_K_Frequent_Elements {
     }
 
     public static void main(String[] args) {
-        System.out.print(find_top_k_quickselect(new ArrayList<Integer>(Arrays.asList(1,1,1,2,2,3)), 2));
+        System.out.print(find_top_k_quickselect(new ArrayList<>(Arrays.asList(1, 1, 1, 2, 2, 3)), 2));
     }
 }

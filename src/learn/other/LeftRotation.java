@@ -12,9 +12,7 @@ public class LeftRotation {
         int count = 1;
         while (count <= d) {
             int temp = input[0];
-            for (int i = 0; i < input.length - 1; i++) {
-                input[i] = input[i + 1];
-            }
+            System.arraycopy(input, 1, input, 0, input.length - 1);
             input[input.length - 1] = temp;
             count++;
         }

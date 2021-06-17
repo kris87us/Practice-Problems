@@ -7,8 +7,8 @@ fun numWaterBottles(numBottles: Int, numExchange: Int): Int {
     if (input/numExchange == 1) return total + 1
     while (input/numExchange > 0) {
         div = input / numExchange
-        total = total + div
-        input = input % numExchange
+        total += div
+        input %= numExchange
     }
     return total + 1
 }

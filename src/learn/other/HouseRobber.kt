@@ -13,7 +13,7 @@ fun rob(nums: IntArray): Int {
             total1 += nums[i]
             i += 2
         } else {
-            var newTotal = total1 + nums[i]
+            val newTotal = total1 + nums[i]
             total1 = if (newTotal > total1) newTotal else total1
             i++
         }
@@ -23,12 +23,12 @@ fun rob(nums: IntArray): Int {
             total2 += nums[j]
             j += 2
         } else {
-            var newTotal = total2 + nums[j]
+            val newTotal = total2 + nums[j]
             total2 = if (newTotal > total1) newTotal else total2
             j++
         }
     }
-    finalVal = Math.max(total1, total2)
+    finalVal = total1.coerceAtLeast(total2)
 
     return finalVal
 }

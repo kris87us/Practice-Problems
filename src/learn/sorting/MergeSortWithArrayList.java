@@ -12,7 +12,7 @@ public class MergeSortWithArrayList {
         // Write your code here.
         int[] input = arr.stream().mapToInt(Integer::intValue).toArray();
         merge_sort_helper(input, 0, input.length - 1);
-        ArrayList<Integer> result = new ArrayList<Integer>();
+        ArrayList<Integer> result = new ArrayList<>();
 
         for (int j : input) {
             result.add(j);

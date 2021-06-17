@@ -3,6 +3,7 @@ package learn.other;
 import java.util.HashMap;
 
 public class RomanToInteger {
+    @SuppressWarnings("unchecked")
     public static int romanToInt(String s) {
         HashMap<String, Integer> roman = new HashMap();
         roman.put("I", 1);

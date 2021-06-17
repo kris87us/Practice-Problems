@@ -6,7 +6,7 @@ fun climbStairs(n: Int): Int {
     if (n == 2) return 2
 
     var i = 3
-    var list = mutableListOf(0, 1, 2)
+    val list = mutableListOf(0, 1, 2)
     while (i <= n) {
         list.add(list[i-1] + list[i-2])
         i++

@@ -17,5 +17,5 @@ fun dividesSelf(n: Int): Boolean {
 }
 
 fun main() {
-    println(dividesSelf(128));
+    println(dividesSelf(128))
 }
