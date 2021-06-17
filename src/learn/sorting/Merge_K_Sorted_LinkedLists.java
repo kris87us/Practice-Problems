@@ -1,5 +1,7 @@
 package learn.sorting;
 
+import models.ListNode;
+
 import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
@@ -15,6 +17,31 @@ public class Merge_K_Sorted_LinkedLists {
             System.out.println(res.data);
             res = res.next;
         }
+    }
+
+    public ListNode mergeKLists(ListNode[] lists) {
+        PriorityQueue<ListNode> heap = new PriorityQueue<>(Comparator.comparingInt(a -> a.val));
+
+        // Add head element of each LL
+        for (ListNode list : lists) {
+            if (list != null) heap.add(list);
+        }
+
+        ListNode dummy = new ListNode(-1);
+        ListNode head = dummy;
+
+        while (!heap.isEmpty()) {
+            ListNode smallest = heap.remove();
+            head.next = new ListNode(smallest.val);
+
+            smallest = smallest.next;
+            if (smallest != null) {
+                heap.add(smallest);
+            }
+            head = head.next;
+        }
+
+        return dummy.next;
     }
 
     public static SinglyLinkedListNode merge_k_lists(List<SinglyLinkedListNode> lists) {

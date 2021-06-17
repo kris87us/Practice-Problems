@@ -14,9 +14,11 @@ public class Top_K_Frequent_Elements {
             map.put(n, map.getOrDefault(n, 0) + 1);
         }
 
-        int index = quickSelectHelper(nums, 0, nums.length - 1, nums.length - k, map);
-        for (int i = index; i <= nums.length - 1; i++) {
-            res.add(nums[i]);
+        int[] newArr = map.keySet().stream().mapToInt(Integer::intValue).toArray();
+
+        int index = quickSelectHelper(newArr, 0, newArr.length - 1, newArr.length - k, map);
+        for (int i = index; i <= newArr.length - 1; i++) {
+            res.add(newArr[i]);
         }
         return res;
     }
@@ -66,6 +68,6 @@ public class Top_K_Frequent_Elements {
     }
 
     public static void main(String[] args) {
-        System.out.print(find_top_k_quickselect(new ArrayList<Integer>(Arrays.asList(1, 2, 3, 2, 4, 3, 1, 5, 5, 5, 5, 5, 6, 4, 1)), 2));
+        System.out.print(find_top_k_quickselect(new ArrayList<Integer>(Arrays.asList(1,1,1,2,2,3)), 2));
     }
 }

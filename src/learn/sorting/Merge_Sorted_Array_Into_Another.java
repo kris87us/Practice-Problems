@@ -1,58 +1,56 @@
 package learn.sorting;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Merge_Sorted_Array_Into_Another {
 
     public static void main(String[] args) {
-        System.out.print(merge_one_into_another(
-                new ArrayList<>(Arrays.asList(1,3,5)),
-                new ArrayList<>(Arrays.asList(2,4,6,0,0,0))
-        ));
+        int[] arr1 = new int[]{13, 21, 24};
+        int[] arr2 = new int[]{13, 23, 26, 0, 0, 0};
+
+        merger_first_into_second(arr1, arr2);
+        System.out.print(Arrays.toString(arr2));
     }
 
-    static ArrayList<Integer> merge_one_into_another(ArrayList<Integer> first, ArrayList<Integer> second) {
-        // Write your code here.
-        int i = 0;
-        int j = 0;
-        int k = first.size() - 1;
 
-        while (i <= first.size() - 1 && j <= k) {
-            if (first.get(i) <= second.get(j)) {
-                int x = k;
-                while (x >= j) {
-                    second.set(x + 1, second.get(x));
-                    x--;
-                }
-                second.set(j, first.get(i));
-                i++;
-                j++;
-                k++;
+    static void merger_first_into_second(int[] arr1, int[] arr2) {
+        // Write your code here.
+        int i = arr1.length - 1;
+        int j = arr1.length - 1;
+        int end = arr2.length - 1;
+
+        while (i >= 0 && j >= 0 && end >= 0) {
+            if (arr1[i] <= arr2[j]) {
+                arr2[end--] = arr2[j--];
             } else {
-                j++;
+                arr2[end--] = arr1[i--];
             }
         }
-        return second;
+        // Move remaining elements
+        while (i >= 0 && end >= 0) {
+            arr2[end--] = arr1[i--];
+        }
+        while (j >= 0 && end >= 0) {
+            arr2[end--] = arr2[j--];
+        }
     }
 
-    static ArrayList<Integer> merge_one_into_another_InsertionSort(ArrayList<Integer> first, ArrayList<Integer> second) {
+    static void merge_one_into_another_InsertionSort(int[] arr1, int[] arr2) {
         // Write your code here.
         int i = 0;
-        for (Integer n : first) {
-            int indexToInsert = second.size() - first.size() + i;
-            second.set(indexToInsert, n);
+        for (Integer n : arr1) {
+            int indexToInsert = arr2.length - arr1.length + i;
+            arr2[indexToInsert] = n;
 
             int j = indexToInsert - 1;
 
-            while (j >= 0 && second.get(j) > n) {
-                second.set(j+1, second.get(j));
+            while (j >= 0 && arr2[j] > n) {
+                arr2[j + 1] = arr2[j];
                 j--;
             }
-            second.set(j+1, n);
+            arr2[j + 1] = n;
             i++;
         }
-        return second;
     }
 
 }

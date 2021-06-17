@@ -11,7 +11,7 @@ public class GroupAnagrams {
         Map<String, List<String>> map = new HashMap<>();
         List<List<String>> result = new ArrayList<>();
         for (String s : strs) {
-            String key = sortChars(s);
+            String key = countingSortForChars(s);
             if (map.containsKey(key)) {
                 map.get(key).add(s);
             } else map.put(key, new ArrayList<>(Collections.singletonList(s)));
@@ -27,5 +27,15 @@ public class GroupAnagrams {
         char[] strArr = s.toCharArray();
         Arrays.sort(strArr);
         return new String(strArr);
+    }
+
+    private static String countingSortForChars(String str) {
+        int[] arrWithCounts = new int[127];
+
+        for (int i = 0; i <= str.length() - 1; i++) {
+            ++arrWithCounts[str.charAt(i) - 'a'];
+        }
+
+        return Arrays.toString(arrWithCounts);
     }
 }
