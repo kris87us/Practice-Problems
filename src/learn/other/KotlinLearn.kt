@@ -138,6 +138,7 @@ fun heightChecker(heights: IntArray): Int {
     return count
 }
 
+// O(2^n) - Can be improved by using for-loop or additive sequencing with two indexes
 fun fibonacci(n: Int): Int {
 
     if (n <= 1) return n

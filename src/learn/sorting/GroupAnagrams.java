@@ -10,6 +10,7 @@ public class GroupAnagrams {
     private static List<List<String>> groupAnagrams(String[] strs) {
         Map<String, List<String>> map = new HashMap<>();
         List<List<String>> result = new ArrayList<>();
+
         for (String s : strs) {
             String key = countingSortForChars(s);
             if (map.containsKey(key)) {
