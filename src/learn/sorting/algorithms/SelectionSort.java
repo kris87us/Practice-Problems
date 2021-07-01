@@ -1,4 +1,4 @@
-package learn.sorting;
+package learn.sorting.algorithms;
 
 import java.util.Arrays;
 // Time : O(n^2)
