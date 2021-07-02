@@ -1,7 +1,7 @@
-# Practice Problems
+# 📝 Practice Problems
 
-## Sorting
-### Algorithms
+## ⚖️ Sorting
+### ⛏ Algorithms
 1. [Bubble Sort](https://github.com/kris87us/Practice-Problems/blob/main/src/learn/sorting/algorithms/BubbleSort.java)
 2. [Selection Sort](https://github.com/kris87us/Practice-Problems/blob/main/src/learn/sorting/algorithms/SelectionSort.java)
 3. [Insertion Sort](https://github.com/kris87us/Practice-Problems/blob/main/src/learn/sorting/algorithms/InsertionSort.java)
