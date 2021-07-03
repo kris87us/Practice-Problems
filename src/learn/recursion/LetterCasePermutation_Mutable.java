@@ -25,12 +25,14 @@ public class LetterCasePermutation_Mutable {
         } else {
             if (Character.isDigit(s.charAt(i))) {
                 partialSolution[i] = s.charAt(i);
+                helper(s, i + 1, partialSolution, res);
             } else {
                 partialSolution[i] = Character.toUpperCase(s.charAt(i));
                 helper(s, i + 1, partialSolution, res);
                 partialSolution[i] = Character.toLowerCase(s.charAt(i));
+                helper(s, i + 1, partialSolution, res);
             }
-            helper(s, i + 1, partialSolution, res);
+            
         }
     }
 }

@@ -16,7 +16,7 @@ import java.util.List;
 // Output(O(n*2^n)) = Output array of 2^n sub-arrays, with each sub-array almost having n/2 elements on average.
 // Overall ==> O(n * 2^n)
 
-public class PrintSubsetsOfASetWithDuplicateElements {
+public class SubsetsWithDuplicateIntegers {
     public static void main(String[] args) {
         printPermutationsOfSet(new int[]{1, 2, 1, 1});
     }
