@@ -8,7 +8,7 @@ import java.util.Collections;
 // Space : O(nCk * k)
 public class Combinations {
     public static void main(String[] args) {
-        combinations(5, 2); // n choose k
+        System.out.print(combinations(5, 2)); // n choose k
     }
 
     public static List<List<Integer>> combinations(int n, int k) {

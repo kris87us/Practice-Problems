@@ -40,7 +40,6 @@ public class QuickSort_3_way_partition {
                 i++;
             }
         }
-        // swap(arr, mid, start);
         // Recursion
         quickSortHelper(arr, start, smaller - 1);
         quickSortHelper(arr, bigger + 1, end);

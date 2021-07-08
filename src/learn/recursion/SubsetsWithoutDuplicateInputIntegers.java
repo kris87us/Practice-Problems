@@ -1,7 +1,6 @@
 package learn.recursion;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -16,13 +15,12 @@ import java.util.List;
 // Output(O(n*2^n)) = Output array of 2^n sub-arrays, with each sub-array almost having n/2 elements on average.
 // Overall ==> O(n * 2^n)
 
-public class SubsetsWithDuplicateIntegers {
+public class SubsetsWithoutDuplicateInputIntegers {
     public static void main(String[] args) {
-        printPermutationsOfSet(new int[]{1, 2, 1, 1});
+        printPermutationsOfSet(new int[]{1, 2, 3});
     }
 
     private static void printPermutationsOfSet(int[] nums) {
-        Arrays.sort(nums);
         List<List<Integer>> res = new ArrayList<>();
         helper(nums, new ArrayList<Integer>(Collections.emptyList()), 0, res);
         System.out.print(res);
@@ -34,25 +32,11 @@ public class SubsetsWithDuplicateIntegers {
             res.add(new ArrayList<>(partialSolution));
             return;
         }
-        // Count the number of duplicates
-        int count = 0;
-        for (int dup = i; dup < subProblem.length; dup++) {
-            if (subProblem[i] != subProblem[dup]) {
-                break;
-            }
-            count++;
-        }
-        // Exclude duplicates and begin from next index
-        helper(subProblem, partialSolution, i + count, res);
+        // Exclude
+        helper(subProblem, partialSolution, i + 1, res);
         // Include
-        // We need to pick all the duplicate choices and pass each one of them down
-        for (int c = 1; c <= count; c++) {
-            partialSolution.add(subProblem[i]);
-            helper(subProblem, partialSolution, i + count, res);
-        }
-        // We need to remove the duplicate element added above after the sub-ordinate returns to clean the slate
-        for (int r = 1; r <= count; r++) {
-            partialSolution.remove(partialSolution.size() - 1);
-        }
+        partialSolution.add(subProblem[i]);
+        helper(subProblem, partialSolution, i + 1, res);
+        partialSolution.remove(partialSolution.size() - 1);
     }
 }
