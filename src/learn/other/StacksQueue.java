@@ -2,14 +2,13 @@ package learn.other;
 
 import java.util.*;
 
-@SuppressWarnings("unchecked")
 public class StacksQueue {
 
     // Write your code here.
-    final LinkedList ds;
+    final LinkedList<Character> ds;
 
-    StacksQueue() {
-        ds = new LinkedList();
+    public StacksQueue() {
+        ds = new LinkedList<Character>();
     }
 
     void pushCharacter(char c) {

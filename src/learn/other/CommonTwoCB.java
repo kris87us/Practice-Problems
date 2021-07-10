@@ -3,6 +3,7 @@ package learn.other;
 import java.util.Scanner;
 
 public class CommonTwoCB {
+    @SuppressWarnings("unused")
     public static int commonTwo(String[] a, String[] b) {
         String str = "adelbc";
         System.out.println(str.substring(1, 4).equals("del"));
@@ -11,11 +12,13 @@ public class CommonTwoCB {
         return 0;
     }
 
+    @SuppressWarnings("unused")
     public static void main(String[] args) {
         commonTwo(new String[]{"a"}, new String[]{"b"});
         Scanner scan = new Scanner(System.in);
         int i = scan.nextInt();
         String s = scan.nextLine();
         double d = scan.nextDouble();
+        scan.close();
     }
 }

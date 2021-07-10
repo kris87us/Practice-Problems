@@ -24,6 +24,7 @@ public class GroupAnagrams {
         return result;
     }
 
+    @SuppressWarnings("unused")
     private static String sortChars(String s) {
         char[] strArr = s.toCharArray();
         Arrays.sort(strArr);

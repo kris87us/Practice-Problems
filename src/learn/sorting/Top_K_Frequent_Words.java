@@ -22,6 +22,7 @@ public class Top_K_Frequent_Words {
         System.out.print(topKFrequent(new String[]{"i", "love", "leetcode", "i", "love", "coding"}, 3));
     }
 
+    @SuppressWarnings("unchecked")
     public static List<String> topKFrequent(String[] words, int k) {
         Map<String, Integer> map = new TreeMap<>((a, b) -> b.compareTo(a));
         for (String word : words) {

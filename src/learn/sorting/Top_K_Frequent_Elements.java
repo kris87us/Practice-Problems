@@ -6,6 +6,7 @@ import static helper.Helper.*;
 
 public class Top_K_Frequent_Elements {
 
+    @SuppressWarnings("unused")
     public static ArrayList<Integer> find_top_k_quickselect(ArrayList<Integer> arr, Integer k) {
         int[] nums = arr.stream().mapToInt(Integer::intValue).toArray();
         Map<Integer, Integer> map = new HashMap<>();
@@ -54,7 +55,6 @@ public class Top_K_Frequent_Elements {
         // Write your code here.
         Map<Integer, Integer> map = new HashMap<>();
         PriorityQueue<Integer> queue = new PriorityQueue<>(k, Comparator.comparingInt(map::get));
-        PriorityQueue<Map.Entry<String, Integer>> heap = new PriorityQueue<>(Comparator.comparingInt(Map.Entry::getValue));
         for (Integer n : arr) {
             map.put(n, map.getOrDefault(n, 0) + 1);
         }

@@ -19,6 +19,7 @@ public class LeftRotation {
         System.out.println(Arrays.toString(input));
     }
 
+    @SuppressWarnings("unused")
     private static List<Integer> leftRotation(List<Integer> input, int d) {
         int count = 1;
         while (count <= d) {

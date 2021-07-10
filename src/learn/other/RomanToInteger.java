@@ -3,9 +3,9 @@ package learn.other;
 import java.util.HashMap;
 
 public class RomanToInteger {
-    @SuppressWarnings("unchecked")
+    
     public static int romanToInt(String s) {
-        HashMap<String, Integer> roman = new HashMap();
+        HashMap<String, Integer> roman = new HashMap<String, Integer>();
         roman.put("I", 1);
         roman.put("V", 5);
         roman.put("X", 10);

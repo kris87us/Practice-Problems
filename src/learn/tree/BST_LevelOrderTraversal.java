@@ -1,11 +1,5 @@
 package learn.tree;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Queue;
-
-import models.TreeNodeJava;
-
 public class BST_LevelOrderTraversal {
     // public static void main(String[] args) {
     //     levelOrder(new TreeNodeJava(3, new TreeNodeJava(9), new TreeNodeJava(20, new TreeNodeJava(15), new TreeNodeJava(7))));

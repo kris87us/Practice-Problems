@@ -3,6 +3,7 @@ package learn.other;
 import java.util.*;
 
 public class JavaLearn {
+    @SuppressWarnings("unused")
     public static void main(String[] args) {
 
         int num = 5;
@@ -31,6 +32,7 @@ public class JavaLearn {
         return "";
     }
 
+    @SuppressWarnings("unused")
     public static String reverse(String s) {
         StringBuilder string = new StringBuilder();
         List<String> f = new ArrayList<>();
@@ -49,6 +51,7 @@ public class JavaLearn {
         return Arrays.equals(arr1, arr2);
     }
 
+    @SuppressWarnings("unused")
     public static String getSmallestAndLargest(String s, int k) {
         String smallest = "";
         String largest = "";

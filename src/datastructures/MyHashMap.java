@@ -7,8 +7,8 @@ class MyHashMap {
     static final int SIZE = 769;
 
     /** Initialize your data structure here. */
+    @SuppressWarnings("unchecked")
     public MyHashMap() {
-        //noinspection unchecked
         buckets = new LinkedList[SIZE];
     }
 

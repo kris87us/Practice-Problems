@@ -9,6 +9,7 @@ public class Fibonacci {
     }
 
     // O(2^n)
+    @SuppressWarnings("unused")
     private static int fibonacciRecursion(int n) {
         if (n <= 1) return n;
 
