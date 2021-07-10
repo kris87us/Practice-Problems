@@ -18,21 +18,15 @@ public class N_Queens {
             }
         }
         helper(n, 0, partialSolution, result);
-        // for (int x = 0; x < result.size(); x++) {
-        //     System.out.println(Arrays.toString(result.get(x)));
-        // }
         return listToArray(result);
     }
 
     private static void helper(int n, int i, String[][] partialSolution, List<String[]> result) {
         // Base case
         if (i == n) {
-            //System.out.println("Inside Base Case");
             String[] internal = new String[n];
             for (int x = 0; x < n; x++) {
-                //System.out.println(Arrays.toString(partialSolution[x]));
                 internal[x] = String.join("", partialSolution[x]);
-                
             }
             result.add(internal);
             return;
@@ -71,7 +65,7 @@ public class N_Queens {
             j++;
             i--;
         }
-
+        // Check if left upper diagonals have attacking queen
         i = row;
         j = col;
         while (i > 0 && j > 0) {
@@ -82,7 +76,6 @@ public class N_Queens {
             j--;
             i--;
         }
-
         return valid;
     }
 
@@ -90,7 +83,6 @@ public class N_Queens {
         String[][] result = new String[input.size()][];
         for (int i = 0; i < input.size(); i++) {
             result[i] = input.get(i);
-
         }
         return result;
     }

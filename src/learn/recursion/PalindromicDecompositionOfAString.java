@@ -28,21 +28,16 @@ public class PalindromicDecompositionOfAString {
         }
 
         // Recursive case
-        for (int j = i + 1; j <= subproblem.length(); j++) {
-            String sub = subproblem.substring(i, j); // a
+        for (int j = i; j < subproblem.length(); j++) {
+            String sub = subproblem.substring(i, j + 1);
+            int len = partialSolution.length();
             if (reverse(sub).equals(sub)) {
                 partialSolution.append(sub);
                 partialSolution.append("|");
-
+                
                 helper(subproblem, i + sub.length(), partialSolution);
-
-                int start = i + j - sub.length();
-                int end = partialSolution.length();
-                if (start > end) {
-                    partialSolution = new StringBuilder("|");
-                } else {
-                    partialSolution.delete(start, end);
-                }
+                
+                partialSolution.setLength(len);
             }
         }
     }
