@@ -3,6 +3,14 @@ package learn.recursion;
 import java.util.ArrayList;
 import java.util.List;
 
+// Time complexity:
+//   O(9^k) where k is the number if unfilled spaces in the input arraylist
+//   Every unfilled space can have any value between 1-9. So there are 9 choices for every unfilled box.
+
+// Space complexity:
+//   Input - O(N * N) - 2D input ArrayList
+//   Aux - O(k) - Call stack space is atmost k where k is number of spaces to be filled
+//   Output - O(1) - No extra space used
 public class SudokuSolver {
 
     public static void main(String[] args) {

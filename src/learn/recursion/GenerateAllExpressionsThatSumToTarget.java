@@ -3,6 +3,22 @@ package learn.recursion;
 import java.util.ArrayList;
 import java.util.List;
 
+// Time Complexity: 
+//   Between each digit we have 3 different things we could do:
+//   1.) do nothing and concatenate the two digits together
+//   2.) add ' + ' between the two digits
+//   3.) add ' * ' between the two digits
+//   Each call branches into 3 additional calls, and each call has a time complexity of O(n) which is the cost of copying a valid path to the result
+//   T(n) = 3T(n - 1) + O(n) which is roughly O(n 3^n)
+
+// Space Complexity: 
+//    Input = O(N)
+//    Aux = O(N * N)
+//      Call stack space at any given point in time, there will be N recursive helpers in the stack since we are doing DFS. 
+//      s.subString will create a new String everytime. Can be optimzed by using a char[]
+//    Output = O(N)
+// Overall: O(N * N)
+
 public class GenerateAllExpressionsThatSumToTarget {
     public static void main(String[] args) {
         generate_all_expressions("222", 24);
