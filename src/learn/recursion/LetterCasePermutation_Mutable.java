@@ -3,7 +3,7 @@ package learn.recursion;
 import java.util.ArrayList;
 import java.util.List;
 
-// Time: Leaf node(O(n * 2^n) + Internal node(O(2^n)) = O(n * 2^n)
+// Time: Leaf node(O(n * 2^n) + Internal node(O(2^n)) = O(n * 2^n) [O(n) comes from the base case creating new String everytime]
 // Space: Input(O(n)) + Aux(O(n)) + Output(O(n*2^n)) = O(n * 2^n) -- Improvement in Aux space/call stack
 // Top down DFS approach
 

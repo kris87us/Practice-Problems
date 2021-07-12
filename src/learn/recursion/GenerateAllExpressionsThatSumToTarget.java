@@ -21,7 +21,7 @@ import java.util.List;
 
 public class GenerateAllExpressionsThatSumToTarget {
     public static void main(String[] args) {
-        generate_all_expressions("222", 24);
+        generate_all_expressions("123", 24);
     }
 
     static String[] generate_all_expressions(String s, long target) {
@@ -35,6 +35,7 @@ public class GenerateAllExpressionsThatSumToTarget {
     // (1 + 2) Here last will be 2
     // (1 + 2 * 3) Here last will be 6, to give precedence to multiplication
     private static void helper(String s, int i, int runningSum, StringBuilder partialSolution, List<String> result, long target, int last) {
+        System.out.println(partialSolution.toString());
         // Backtracking case
         if (i == s.length()) {
             if (runningSum == target) {

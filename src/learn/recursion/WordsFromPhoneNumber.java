@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class WordsFromPhoneNumber {
     public static void main(String[] args) {
-        System.out.print(getWordsFromPhoneNumber("123"));
+        System.out.print(getWordsFromPhoneNumber("23"));
     }
 
     public static List<String> getWordsFromPhoneNumber(String phoneNumber) {
@@ -37,7 +37,7 @@ public class WordsFromPhoneNumber {
 
     private static void helper(String subproblem, int i, StringBuilder partialSolution, List<String> result,
             Map<Integer, String> map, int k) {
-
+        System.out.println(partialSolution.toString());
         // Backtracking
         if (k == partialSolution.length()) {
             result.add(new String(partialSolution.toString()));
@@ -50,9 +50,7 @@ public class WordsFromPhoneNumber {
 
         Integer digit = Character.getNumericValue(subproblem.charAt(i));
         // Recursion
-        // Exclude
-        helper(subproblem, i + 1, partialSolution, result, map, k);
-
+        // No need of Exclude case
         // Include
         for (Character c : map.get(digit).toCharArray()) {
             partialSolution.append(c);
