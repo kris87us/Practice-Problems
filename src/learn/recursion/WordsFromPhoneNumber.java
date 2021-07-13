@@ -29,22 +29,18 @@ public class WordsFromPhoneNumber {
         if (phoneNumber.isEmpty()) {
             result.add("-1");
         } else {
-            helper(phoneNumber, 0, new StringBuilder(), result, map, phoneNumber.length());
+            helper(phoneNumber, 0, new StringBuilder(), result, map);
         }
 
         return result;
     }
 
     private static void helper(String subproblem, int i, StringBuilder partialSolution, List<String> result,
-            Map<Integer, String> map, int k) {
-        System.out.println(partialSolution.toString());
-        // Backtracking
-        if (k == partialSolution.length()) {
-            result.add(new String(partialSolution.toString()));
-            return;
-        }
+            Map<Integer, String> map) {
+        
         // Base case
         if (i == subproblem.length()) {
+            result.add(new String(partialSolution.toString()));
             return;
         }
 
@@ -54,7 +50,7 @@ public class WordsFromPhoneNumber {
         // Include
         for (Character c : map.get(digit).toCharArray()) {
             partialSolution.append(c);
-            helper(subproblem, i + 1, partialSolution, result, map, k);
+            helper(subproblem, i + 1, partialSolution, result, map);
             partialSolution.deleteCharAt(partialSolution.length() - 1);
         }
     }

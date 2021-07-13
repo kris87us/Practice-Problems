@@ -50,6 +50,7 @@ public class GenerateAllExpressionsThatSumToTarget {
             // Start with single digits and then go on to choosing multi-digits ( 1 + 2 OR 12 + 34). No need of a special JOIN case
             String curr = s.substring(i, c + 1);
             Integer currInt = Integer.parseInt(curr);
+            
             // Length of slate before recursion. Used to undo the slate, easier than deleting characters.
             int len = partialSolution.length();
             if (i == 0) {
