@@ -79,10 +79,19 @@ Letter Combinations of a Phone Number |arrays |combination and permutation, recu
 Combination Sum |arrays |backtracking, combination and permutation, recursion|[Problem](https://leetcode.com/problems/combination-sum/) |[Solution](https://github.com/kris87us/Practice-Problems/blob/main/src/learn/recursion/CombinationSum.java)
 Combination Sum II |arrays |backtracking, combination and permutation, recursion|[Problem](https://leetcode.com/problems/combination-sum-ii/) |[Solution](https://github.com/kris87us/Practice-Problems/blob/main/src/learn/recursion/GenerateCombinationSumEqualToTarget.java)
 Combinations |arrays |backtracking, combination and permutation, recursion|[Problem](https://leetcode.com/problems/combinations/) | [Solution](https://github.com/kris87us/Practice-Problems/blob/main/src/learn/recursion/Combinations.java)
-N-Queens |arrays |backtracking, combination and permutation, recursion|[Problem](https://leetcode.com/problems/n-queens/) | [Solution](https://github.com/kris87us/Practice-Problems/blob/main/src/learn/recursion/N_Queens.java)
+N-Queens |arrays |backtracking, combination and permutation, recursion|[Problem](https://leetcode.com/problems/n-queens/) | [Solution](https://github.com/kris87us/Practice-Problems/blob/main/src/learn/recursion/N_Queens_Optimal.java)
 Generate Parenthesis |arrays |backtracking, combination and permutation, recursion|[Problem](https://leetcode.com/problems/generate-parentheses/) | [Solution](https://github.com/kris87us/Practice-Problems/blob/main/src/learn/recursion/GenerateValidParenthesis.java)
 Sudoku Solver |arrays |backtracking, combination and permutation, recursion|[Problem](https://leetcode.com/problems/sudoku-solver) |[Solution]( https://github.com/kris87us/Practice-Problems/blob/main/src/learn/recursion/SudokuSolver.java)
 Generate All Expressions that Sum to a Target |arrays |backtracking, combination and permutation, recursion|[Problem](https://leetcode.com/problems/expression-add-operators/) |[Solution]( https://github.com/kris87us/Practice-Problems/blob/main/src/learn/recursion/GenerateAllExpressionsThatSumToTarget.java)
 Palindromic Decomposition of a String |arrays |backtracking, combination and permutation, recursion|[Problem](https://leetcode.com/problems/palindrome-partitioning/) | [Solution](https://github.com/kris87us/Practice-Problems/blob/main/src/learn/recursion/PalindromicDecompositionOfAString.java)
 How many BSTs with N nodes|arrays |backtracking, combination and permutation, recursion|[Problem](https://leetcode.com/problems/unique-binary-search-trees/) | [Solution](https://github.com/kris87us/Practice-Problems/blob/main/src/learn/recursion/HowManyBinaryTreesFrom_N_nodes.java)
 Word Search| arrays | backtracking, recursion | [Problem](https://leetcode.com/problems/word-search/) | [Solution](https://github.com/kris87us/Practice-Problems/blob/main/src/learn/recursion/WordSearch.java)
+
+
+## 🌲 Trees
+
+### 🔨 Algorithms
+1. [Find Minimum & Maximum in a BST](src/learn/tree/algorithms/BST_FindMinimumAndMaximum.java)
+2. [Level Order Traversal / Breadth-First Search in a Binary Tree](src/learn/tree/algorithms/BT_LevelOrderTraversal.java)
+3. [Find Successor and Predecessor in a BST](src/learn/tree/algorithms/BST_Successor_Predecessor.java)
+4. [BST Insert a Node](src/learn/tree/algorithms/BST_Insertion.java)

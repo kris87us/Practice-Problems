@@ -4,7 +4,30 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import models.TreeNodeJava;
+
 public class Helper {
+
+    public static TreeNodeJava createBinaryTree() {
+        TreeNodeJava root = new TreeNodeJava(1, 
+            new TreeNodeJava(2, 
+        new TreeNodeJava(4), new TreeNodeJava(5)), 
+            new TreeNodeJava(3, 
+        new TreeNodeJava(6), new TreeNodeJava(7)));
+
+        return root;
+    }
+
+    public static TreeNodeJava createBST() {
+        TreeNodeJava root = new TreeNodeJava(4, 
+            new TreeNodeJava(2, 
+        new TreeNodeJava(1), new TreeNodeJava(3)), 
+            new TreeNodeJava(6, 
+        new TreeNodeJava(5), new TreeNodeJava(7)));
+
+        return root;
+    }
+
     public static int[] convertIntegerListToArray(final List<Integer> list)
     {
         return list.stream().mapToInt(Integer::intValue).toArray();
