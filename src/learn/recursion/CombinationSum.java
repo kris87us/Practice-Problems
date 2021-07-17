@@ -10,8 +10,7 @@ public class CombinationSum {
     }
 
     public static List<List<Integer>> combinationSum(int[] candidates, int target) {
-        // Sort the input to make it faster, so that bigger numbers don't get processed
-        // at all
+        // Sort the input to make it faster, so that bigger numbers don't get processed at all
         Arrays.sort(candidates);
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         helper(candidates, 0, new ArrayList<Integer>(), 0, target, result);

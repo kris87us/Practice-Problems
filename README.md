@@ -95,3 +95,4 @@ Word Search| arrays | backtracking, recursion | [Problem](https://leetcode.com/p
 2. [Level Order Traversal / Breadth-First Search in a Binary Tree](src/learn/tree/algorithms/BT_LevelOrderTraversal.java)
 3. [Find Successor and Predecessor in a BST](src/learn/tree/algorithms/BST_Successor_Predecessor.java)
 4. [BST Insert a Node](src/learn/tree/algorithms/BST_Insertion.java)
+5. [BST Delete a Node](src/learn/tree/algorithms/BST_Delete.java)

@@ -9,6 +9,11 @@ import models.TreeNodeJava;
 public class Helper {
 
     public static TreeNodeJava createBinaryTree() {
+        /**
+                1
+             2     3
+           4   5 6   7
+        */
         TreeNodeJava root = new TreeNodeJava(1, 
             new TreeNodeJava(2, 
         new TreeNodeJava(4), new TreeNodeJava(5)), 
@@ -18,6 +23,11 @@ public class Helper {
         return root;
     }
 
+    /**
+            4
+         2     6
+       1   3 5   7
+    */
     public static TreeNodeJava createBST() {
         TreeNodeJava root = new TreeNodeJava(4, 
             new TreeNodeJava(2, 
