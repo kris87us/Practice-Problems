@@ -102,12 +102,12 @@ N-Queens II| arrays | backtracking, recursion | [Problem](https://leetcode.com/p
 
 Problem |DS |Algo |Link |Github
 --|--|--|--|--
-Binary Tree Level Order Travesal | trees | bfs | [Problem] (https://leetcode.com/problems/binary-tree-level-order-traversal/) | [Solution](src/learn/tree/BinaryTreeLevelOrderTraversal.java)
-Binary Tree Level Order Travesal II | trees | bfs | [Problem] (https://leetcode.com/problems/binary-tree-level-order-traversal-ii/) | [Solution](src/learn/tree/BinaryTreeLevelOrderTraversal_II.java)
-N-ary Tree Level Order Travesal | trees | bfs | [Problem] (https://leetcode.com/problems/n-ary-tree-level-order-traversal/) | [Solution](src/learn/tree/N_AryTreeLevelOrderTraversal.java)
-Binary Tree Right Side View | trees | bfs | [Problem] (https://leetcode.com/problems/binary-tree-right-side-view/) | [Solution](src/learn/tree/BinaryTreeRightSideView.java)
-Binary Tree Zigzag Level Order Travesal | trees | bfs | [Problem] (https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/) | [Solution](src/learn/tree/BinaryTreeZigzagLevelOrderTraversal.java)
-Path Sum | trees | dfs, top-down dfs | [Problem] (https://leetcode.com/problems/path-sum/) | [Solution](src/learn/tree/PathSum.java)
-Path Sum II | trees | dfs, top-down dfs | [Problem] (https://leetcode.com/problems/path-sum-ii/) | [Solution](src/learn/tree/PathSum_II.java)
-Diameter of a Binary Tree | trees | bfs, bottom-up bfs | [Problem] (https://leetcode.com/problems/diameter-of-binary-tree/) | [Solution](src/learn/tree/DiameterOfBinaryTree.java)
-Count Univalue Subtrees | trees | bfs, bottom-up bfs | [Problem] (https://leetcode.com/problems/count-univalue-subtrees/) | [Solution](src/learn/tree/CountUnivalueSubtrees.java)
+Binary Tree Level Order Travesal | trees | bfs | [Problem](https://leetcode.com/problems/binary-tree-level-order-traversal/) | [Solution](src/learn/tree/BinaryTreeLevelOrderTraversal.java)
+Binary Tree Level Order Travesal II | trees | bfs | [Problem](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/) | [Solution](src/learn/tree/BinaryTreeLevelOrderTraversal_II.java)
+N-ary Tree Level Order Travesal | trees | bfs | [Problem](https://leetcode.com/problems/n-ary-tree-level-order-traversal/) | [Solution](src/learn/tree/N_AryTreeLevelOrderTraversal.java)
+Binary Tree Right Side View | trees | bfs | [Problem](https://leetcode.com/problems/binary-tree-right-side-view/) | [Solution](src/learn/tree/BinaryTreeRightSideView.java)
+Binary Tree Zigzag Level Order Travesal | trees | bfs | [Problem](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/) | [Solution](src/learn/tree/BinaryTreeZigzagLevelOrderTraversal.java)
+Path Sum | trees | dfs, top-down dfs | [Problem](https://leetcode.com/problems/path-sum/) | [Solution](src/learn/tree/PathSum.java)
+Path Sum II | trees | dfs, top-down dfs | [Problem](https://leetcode.com/problems/path-sum-ii/) | [Solution](src/learn/tree/PathSum_II.java)
+Diameter of a Binary Tree | trees | bfs, bottom-up bfs | [Problem](https://leetcode.com/problems/diameter-of-binary-tree/) | [Solution](src/learn/tree/DiameterOfBinaryTree.java)
+Count Univalue Subtrees | trees | bfs, bottom-up bfs | [Problem](https://leetcode.com/problems/count-univalue-subtrees/) | [Solution](src/learn/tree/CountUnivalueSubtrees.java)
