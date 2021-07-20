@@ -86,6 +86,7 @@ Generate All Expressions that Sum to a Target |arrays |backtracking, combination
 Palindromic Decomposition of a String |arrays |backtracking, combination and permutation, recursion|[Problem](https://leetcode.com/problems/palindrome-partitioning/) | [Solution](https://github.com/kris87us/Practice-Problems/blob/main/src/learn/recursion/PalindromicDecompositionOfAString.java)
 How many BSTs with N nodes|arrays |backtracking, combination and permutation, recursion|[Problem](https://leetcode.com/problems/unique-binary-search-trees/) | [Solution](https://github.com/kris87us/Practice-Problems/blob/main/src/learn/recursion/HowManyBinaryTreesFrom_N_nodes.java)
 Word Search| arrays | backtracking, recursion | [Problem](https://leetcode.com/problems/word-search/) | [Solution](https://github.com/kris87us/Practice-Problems/blob/main/src/learn/recursion/WordSearch.java)
+N-Queens II| arrays | backtracking, recursion | [Problem](https://leetcode.com/problems/n-queens-ii) | [Solution](https://github.com/kris87us/Practice-Problems/blob/main/src/learn/recursion/N_Queens_II.java)
 
 
 ## 🌲 Trees
@@ -96,3 +97,17 @@ Word Search| arrays | backtracking, recursion | [Problem](https://leetcode.com/p
 3. [Find Successor and Predecessor in a BST](src/learn/tree/algorithms/BST_Successor_Predecessor.java)
 4. [BST Insert a Node](src/learn/tree/algorithms/BST_Insertion.java)
 5. [BST Delete a Node](src/learn/tree/algorithms/BST_Delete.java)
+
+### 🧩 Problems
+
+Problem |DS |Algo |Link |Github
+--|--|--|--|--
+Binary Tree Level Order Travesal | trees | bfs | [Problem] (https://leetcode.com/problems/binary-tree-level-order-traversal/) | [Solution](src/learn/tree/BinaryTreeLevelOrderTraversal.java)
+Binary Tree Level Order Travesal II | trees | bfs | [Problem] (https://leetcode.com/problems/binary-tree-level-order-traversal-ii/) | [Solution](src/learn/tree/BinaryTreeLevelOrderTraversal_II.java)
+N-ary Tree Level Order Travesal | trees | bfs | [Problem] (https://leetcode.com/problems/n-ary-tree-level-order-traversal/) | [Solution](src/learn/tree/N_AryTreeLevelOrderTraversal.java)
+Binary Tree Right Side View | trees | bfs | [Problem] (https://leetcode.com/problems/binary-tree-right-side-view/) | [Solution](src/learn/tree/BinaryTreeRightSideView.java)
+Binary Tree Zigzag Level Order Travesal | trees | bfs | [Problem] (https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/) | [Solution](src/learn/tree/BinaryTreeZigzagLevelOrderTraversal.java)
+Path Sum | trees | dfs, top-down dfs | [Problem] (https://leetcode.com/problems/path-sum/) | [Solution](src/learn/tree/PathSum.java)
+Path Sum II | trees | dfs, top-down dfs | [Problem] (https://leetcode.com/problems/path-sum-ii/) | [Solution](src/learn/tree/PathSum_II.java)
+Diameter of a Binary Tree | trees | bfs, bottom-up bfs | [Problem] (https://leetcode.com/problems/diameter-of-binary-tree/) | [Solution](src/learn/tree/DiameterOfBinaryTree.java)
+Count Univalue Subtrees | trees | bfs, bottom-up bfs | [Problem] (https://leetcode.com/problems/count-univalue-subtrees/) | [Solution](src/learn/tree/CountUnivalueSubtrees.java)

@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+// Time: O(N * 2^N)
+// Space: O(N * 2^N)
 public class PalindromicDecompositionOfAString {
     static List<String> res = new ArrayList<>();
 

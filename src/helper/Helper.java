@@ -16,9 +16,9 @@ public class Helper {
         */
         TreeNodeJava root = new TreeNodeJava(1, 
             new TreeNodeJava(2, 
-        new TreeNodeJava(4), new TreeNodeJava(5)), 
-            new TreeNodeJava(3, 
-        new TreeNodeJava(6), new TreeNodeJava(7)));
+        new TreeNodeJava(4, new TreeNodeJava(8), null), new TreeNodeJava(4)), 
+            new TreeNodeJava(4, 
+        new TreeNodeJava(4), new TreeNodeJava(4)));
 
         return root;
     }
