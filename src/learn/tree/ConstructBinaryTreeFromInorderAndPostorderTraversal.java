@@ -39,7 +39,7 @@ public class ConstructBinaryTreeFromInorderAndPostorderTraversal {
         int rootIndex = map.get(root.val);
         // Calculate number of elements to the left and right
         int numsLeft = rootIndex - startI;
-        int numsRight = endI - rootIndex;
+        // int numsRight = endI - rootIndex;
 
         root.left = constructHelper(inorder, startI, rootIndex - 1, postorder, startP, startP + numsLeft - 1, map);
         root.right = constructHelper(inorder, rootIndex + 1, endI, postorder, startP + numsLeft, endP - 1, map);
