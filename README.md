@@ -111,3 +111,6 @@ Path Sum | trees | dfs, top-down dfs | [Problem](https://leetcode.com/problems/p
 Path Sum II | trees | dfs, top-down dfs | [Problem](https://leetcode.com/problems/path-sum-ii/) | [Solution](src/learn/tree/PathSum_II.java)
 Diameter of a Binary Tree | trees | bfs, bottom-up bfs | [Problem](https://leetcode.com/problems/diameter-of-binary-tree/) | [Solution](src/learn/tree/DiameterOfBinaryTree.java)
 Count Univalue Subtrees | trees | bfs, bottom-up bfs | [Problem](https://leetcode.com/problems/count-univalue-subtrees/) | [Solution](src/learn/tree/CountUnivalueSubtrees.java)
+Convert Sorted Array to BST | trees | tree construction, top-down | [Problem](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) | [Solution](src/learn/tree/ConvertSortedArrayToBST.java)
+Construct Binary Tree from Preorder and Inorder Traversal | trees | tree construction, top-down | [Problem](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | [Solution](src/learn/tree/ConstructBinaryTreeFromPreorderAndInorderTraversal.java)
+Construct Binary Tree from Inorder and Postorder Traversal | trees | tree construction, top-down | [Problem](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/) | [Solution](src/learn/tree/ConstructBinaryTreeFromInorderAndPostorderTraversal.java)
