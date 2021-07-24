@@ -102,6 +102,9 @@ N-Queens II| arrays | backtracking, recursion | [Problem](https://leetcode.com/p
 
 Problem |DS |Algo |Link |Github
 --|--|--|--|--
+Binary Tree Preorder Traversal | trees | dfs, iterative | [Problem](https://leetcode.com/problems/binary-tree-preorder-traversal/) | [Solution](src/learn/tree/BinaryTreePreorderTraversal.java)
+Binary Tree Inorder Traversal | trees | dfs, iterative | [Problem](https://leetcode.com/problems/binary-tree-inorder-traversal/) | [Solution](src/learn/tree/BinaryTreeInorderTraversal.java)
+Binary Tree Postorder Traversal | trees | dfs, iterative | [Problem](https://leetcode.com/problems/binary-tree-postorder-traversal/) | [Solution](src/learn/tree/BinaryTreePostOrderTraversal.java)
 Binary Tree Level Order Travesal | trees | bfs | [Problem](https://leetcode.com/problems/binary-tree-level-order-traversal/) | [Solution](src/learn/tree/BinaryTreeLevelOrderTraversal.java)
 Binary Tree Level Order Travesal II | trees | bfs | [Problem](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/) | [Solution](src/learn/tree/BinaryTreeLevelOrderTraversal_II.java)
 N-ary Tree Level Order Travesal | trees | bfs | [Problem](https://leetcode.com/problems/n-ary-tree-level-order-traversal/) | [Solution](src/learn/tree/N_AryTreeLevelOrderTraversal.java)
@@ -114,4 +117,5 @@ Count Univalue Subtrees | trees | bfs, bottom-up bfs | [Problem](https://leetcod
 Convert Sorted Array to BST | trees | tree construction, top-down | [Problem](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) | [Solution](src/learn/tree/ConvertSortedArrayToBST.java)
 Construct Binary Tree from Preorder and Inorder Traversal | trees | tree construction, top-down | [Problem](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | [Solution](src/learn/tree/ConstructBinaryTreeFromPreorderAndInorderTraversal.java)
 Construct Binary Tree from Inorder and Postorder Traversal | trees | tree construction, top-down | [Problem](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/) | [Solution](src/learn/tree/ConstructBinaryTreeFromInorderAndPostorderTraversal.java)
+Construct Binary Search Tree from Preorder Traversal | trees | tree construction, top-down | [Problem](https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal) | [Solution](src/learn/tree/ConstructBinarySearchTreeFromPreorderTraversal.java)
 Add One Row to Tree | trees | tree traversal, bfs | [Problem](https://leetcode.com/problems/add-one-row-to-tree/) | [Solution](src/learn/tree/AddOneRowToTree.java)
