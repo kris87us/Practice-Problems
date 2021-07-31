@@ -26,8 +26,7 @@ class SumOfLeftLeaves {
         }
 
         @JvmStatic
-        fun calculateSumOfLeftLeaves(
-            root: TreeNode?, sum: Int, isLeft: Boolean): Int {
+        fun calculateSumOfLeftLeaves(root: TreeNode?, sum: Int, isLeft: Boolean): Int {
             if (root == null) return 0
 
             val runningSum = root.`val` + sum
