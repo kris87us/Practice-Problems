@@ -13,11 +13,12 @@ public class ConstructBinarySearchTreeFromPreorderTraversal {
         if (preorder.size() == 0) return null;
         
         List<Integer> inorder = List.copyOf(preorder);
+        Collections.sort(inorder);
+
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < inorder.size(); i++) {
             map.put(inorder.get(i), i);
         }
-        Collections.sort(inorder);
 
         return helper(preorder, 0, preorder.size() - 1, inorder, 0, inorder.size() - 1, map);
     }

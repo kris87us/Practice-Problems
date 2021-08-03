@@ -133,3 +133,8 @@ Cousins In Binary Tree | trees | bfs | [Problem](https://leetcode.com/problems/c
 Lowest Common Ancestor | trees | dfs, bottom-up | [Problem](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) | [Solution](src/learn/tree/LowestCommonAncestor.java)
 Validate Binary Search Tree | trees | dfs, inorder | [Problem](https://leetcode.com/problems/validate-binary-search-tree/) | [Solution](src/learn/tree/ValidateBinaryTree.java)
 Symmetric Tree | trees | bfs | [Problem](https://leetcode.com/problems/symmetric-tree) | [Solution](src/learn/tree/SymmetricTree.java)
+Count Good Nodes In Binary Tree | trees | dfs, top-down | [Problem](https://leetcode.com/problems/count-good-nodes-in-binary-tree) | [Solution](src/learn/tree/CountGoodNodesInBinaryTree.java)
+Kth Smallest Element in BST | trees | dfs, bottom-up dfs | [Problem](https://leetcode.com/problems/kth-smallest-element-in-a-bst) | [Solution](src/learn/tree/FindKthSmallestElementInBST.java)
+Height Of N-ary Tree | trees | bfs | [Problem](https://leetcode.com/problems/maximum-depth-of-n-ary-tree/) | [Solution](src/learn/tree/HeightOfNaryTree.java)
+Longest Unival Path | trees | dfs, bottom-up dfs | [Problem](https://leetcode.com/problems/longest-univalue-path) | [Solution]()
+Populate *Next right pointers in Each Node | trees | bfs, pointer manipulation | [Problem](https://leetcode.com/problems/populating-next-right-pointers-in-each-node) | [Solution](src/learn/tree/PopulateNextRightPointersInEachNode.java) 
