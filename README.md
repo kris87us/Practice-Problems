@@ -137,4 +137,19 @@ Count Good Nodes In Binary Tree | trees | dfs, top-down | [Problem](https://leet
 Kth Smallest Element in BST | trees | dfs, bottom-up dfs | [Problem](https://leetcode.com/problems/kth-smallest-element-in-a-bst) | [Solution](src/learn/tree/FindKthSmallestElementInBST.java)
 Height Of N-ary Tree | trees | bfs | [Problem](https://leetcode.com/problems/maximum-depth-of-n-ary-tree/) | [Solution](src/learn/tree/HeightOfNaryTree.java)
 Longest Unival Path | trees | dfs, bottom-up dfs | [Problem](https://leetcode.com/problems/longest-univalue-path) | [Solution]()
-Populate *Next right pointers in Each Node | trees | bfs, pointer manipulation | [Problem](https://leetcode.com/problems/populating-next-right-pointers-in-each-node) | [Solution](src/learn/tree/PopulateNextRightPointersInEachNode.java) 
+Populate *Next right pointers in Each Node | trees | bfs, pointer manipulation | [Problem](https://leetcode.com/problems/populating-next-right-pointers-in-each-node) | [Solution](src/learn/tree/PopulateNextRightPointersInEachNode.java)
+
+
+## 📈 Graphs
+
+### 🔨 Algorithms
+1. [BFS](src/learn/graphs/algorithms/BFS.java)
+2. [DFS](src/learn/graphs/algorithms/DFS.java)
+
+### 🧩 Problems
+
+Problem |DS |Algo |Link |Github
+--|--|--|--|--
+Graph Valid Tree | graphs | dfs, bfs | [Problem](https://leetcode.com/problems/graph-valid-tree) | [Solution](src/learn/graphs/GraphValidTree.java)
+Find number of connected components | graphs | dfs, bfs | [Problem](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph) | [Solution](src/learn/graphs/FindNumberOfConnectedComponents.java)
+Is Graph Bipartite | graphs | dfs, bfs | [Problem](https://leetcode.com/problems/is-graph-bipartite) | [Solution](src/learn/graphs/IsGraphBipartite.java)
