@@ -153,3 +153,5 @@ Problem |DS |Algo |Link |Github
 Graph Valid Tree | graphs | dfs, bfs | [Problem](https://leetcode.com/problems/graph-valid-tree) | [Solution](src/learn/graphs/GraphValidTree.java)
 Find number of connected components | graphs | dfs, bfs | [Problem](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph) | [Solution](src/learn/graphs/FindNumberOfConnectedComponents.java)
 Is Graph Bipartite | graphs | dfs, bfs | [Problem](https://leetcode.com/problems/is-graph-bipartite) | [Solution](src/learn/graphs/IsGraphBipartite.java)
+Number of Islands | graphs | dfs, bfs | [Problem](https://leetcode.com/problems/number-of-islands/) | [Solution](src/learn/graphs/NumberOfIslands.java)
+Search for Largest Island | graphs | dfs, bfs | [Problem](https://leetcode.com/problems/max-area-of-island/) | [Solution](src/learn/graphs/SearchForLargestIsland.java)
