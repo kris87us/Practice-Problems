@@ -37,7 +37,7 @@ public class GraphValidTree {
             if (visited.get(v) == false) {
                 components += 1;
                 if (components > 1) {
-                    return false; // More than 2 connected components is not a valid tree
+                    return false; // More than 1 connected components is not a valid tree
                 }
                 if (BFS(v)) { // Found a cycle, NOT a Tree
                     return false;

@@ -155,3 +155,5 @@ Find number of connected components | graphs | dfs, bfs | [Problem](https://leet
 Is Graph Bipartite | graphs | dfs, bfs | [Problem](https://leetcode.com/problems/is-graph-bipartite) | [Solution](src/learn/graphs/IsGraphBipartite.java)
 Number of Islands | graphs | dfs, bfs | [Problem](https://leetcode.com/problems/number-of-islands/) | [Solution](src/learn/graphs/NumberOfIslands.java)
 Search for Largest Island | graphs | dfs, bfs | [Problem](https://leetcode.com/problems/max-area-of-island/) | [Solution](src/learn/graphs/SearchForLargestIsland.java)
+Course Schedule | graphs | dfs, bfs | [Problem](https://leetcode.com/problems/course-schedule/) | [Solution](src/learn/graphs/CourseSchedule.java)
+Friendly Groups | graphs | dfs, bfs | [Problem](https://leetcode.com/problems/possible-bipartition/) | [Solution](src/learn/graphs/FriendlyGroups.java)
