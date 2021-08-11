@@ -157,3 +157,7 @@ Number of Islands | graphs | dfs, bfs | [Problem](https://leetcode.com/problems/
 Search for Largest Island | graphs | dfs, bfs | [Problem](https://leetcode.com/problems/max-area-of-island/) | [Solution](src/learn/graphs/SearchForLargestIsland.java)
 Course Schedule | graphs | dfs, bfs | [Problem](https://leetcode.com/problems/course-schedule/) | [Solution](src/learn/graphs/CourseSchedule.java)
 Friendly Groups | graphs | dfs, bfs | [Problem](https://leetcode.com/problems/possible-bipartition/) | [Solution](src/learn/graphs/FriendlyGroups.java)
+Flood Fill | graphs | dfs, bfs | [Problem](https://leetcode.com/problems/flood-fill/) | [Solution](src/learn/graphs/FloodFill.java)
+Critical Connections | graphs | dfs, bridges, bottom-up dfs | [Problem](https://leetcode.com/problems/critical-connections-in-a-network/) | [Solution](src/learn/graphs/CriticalConnections.java)
+Knights Tour On a Chess Board | graphs | dfs, bfs | [Problem](https://leetcode.com/problems/minimum-knight-moves/) | [Solution](src/learn/graphs/KnightsTourOnAChessBoard.java)
+Zombie Cluster | graphs | dfs, bfs | [Problem]() | [Solution](src/learn/graphs/ZombieCluster.java)

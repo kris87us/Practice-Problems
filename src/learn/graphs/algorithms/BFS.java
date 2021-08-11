@@ -22,11 +22,11 @@ public class BFS {
         visited = new ArrayList<>(Collections.nCopies(5, false));
         result = new ArrayList<>();
 
-        BFS_Iterative(0);
+        BFS(0);
         System.out.print("The BFS traversal for the Graph is: "+ result);
     }
 
-    private static void BFS_Iterative(int source) {
+    private static void BFS(int source) {
         Queue<Integer> q = new LinkedList<>();
         q.offer(source);
         visited.set(source, true);
