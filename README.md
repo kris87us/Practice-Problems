@@ -164,3 +164,4 @@ Knights Tour On a Chess Board | graphs | dfs, bfs | [Problem](https://leetcode.c
 Zombie Cluster | graphs | dfs, bfs | [Problem]() | [Solution](src/learn/graphs/ZombieCluster.java)
 Word Ladder | graphs | bfs | [Problem](https://leetcode.com/problems/word-ladder/) | [Solution](src/learn/graphs/WordLadder.java)
 Word Ladder II | graphs | bfs | [Problem](https://leetcode.com/problems/word-ladder-ii/) | [Solution](src/learn/graphs/StringTransformation_aka_WordLadder2.java)
+Alien Dictionary | graphs | dfs | [Problem](https://leetcode.com/problems/alien-dictionary) | [Solution](src/learn/graphs/AlienDictionary.java)
