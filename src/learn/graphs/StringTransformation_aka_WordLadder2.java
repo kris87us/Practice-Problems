@@ -62,12 +62,12 @@ public class StringTransformation_aka_WordLadder2 {
             Node node = q.poll();
             Set<String> neighbors = new HashSet<>();
             // If time complexity of getNeighbors is O(m^2 * n) 
-            // [ no. of words in the list is small but length of each word could be long]
+            // [no. of words in the list is small but length of each word could be long]
             if (wordsLength <= 26 * start.length()) {
                 neighbors = getNeighbors1(node.word, wordSet);
             } else {
                 // If time complexity of getNeighbors is O(n^2 * m) 
-                // [ no. of words in the list is big but length of each word could be short]
+                // [no. of words in the list is big but length of each word could be short]
                 neighbors = getNeighbors2(node.word, wordSet);
             }
             for (String neighbor : neighbors) {
