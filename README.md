@@ -165,3 +165,14 @@ Zombie Cluster | graphs | dfs, bfs | [Problem]() | [Solution](src/learn/graphs/Z
 Word Ladder | graphs | bfs | [Problem](https://leetcode.com/problems/word-ladder/) | [Solution](src/learn/graphs/WordLadder.java)
 Word Ladder II | graphs | bfs | [Problem](https://leetcode.com/problems/word-ladder-ii/) | [Solution](src/learn/graphs/StringTransformation_aka_WordLadder2.java)
 Alien Dictionary | graphs | dfs | [Problem](https://leetcode.com/problems/alien-dictionary) | [Solution](src/learn/graphs/AlienDictionary.java)
+Clone Graph / Reverse a Graph | graphs | bfs, dfs | [Problem]() | [Solution](src/learn/graphs/ReverseAGraph.java)
+
+## 📈 Graphs
+
+### 🧩 Problems
+
+Problem |DS |Algo |Link |Github
+--|--|--|--|--
+Fibonacci | arrays | dp, tabulation, memoization | [Problem](https://leetcode.com/problems/fibonacci-number/) | [Solution](src/learn/dynamicprogramming/Fibonacci.java)
+Climbing Stairs | arrays | dp, tabulation, memoization | [Problem](https://leetcode.com/problems/climbing-stairs/) | [Solution](src/learn/dynamicprogramming/ClimbingStairs.java)
+Count Subsets of Size K | arrays | dp, tabulation | [Problem]() | [Solution](src/learn/dynamicprogramming/CountSubsetsOfSizeK.java)

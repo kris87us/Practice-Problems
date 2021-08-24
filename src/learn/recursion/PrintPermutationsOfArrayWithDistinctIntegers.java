@@ -37,7 +37,7 @@ public class PrintPermutationsOfArrayWithDistinctIntegers {
             return;
         }
         // i will increment with each level in the tree
-        // k will increment each time a element needs to be picked
+        // pick will increment each time a element needs to be picked
         for (int pick = i; pick < subproblem.size(); pick++) {
             // Swap i with pick so that we can pass a contiguous list of elements to sub-ordinate to pick next permutation
             Collections.swap(subproblem, pick, i);

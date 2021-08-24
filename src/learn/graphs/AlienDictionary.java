@@ -8,7 +8,6 @@ import java.util.Set;
 public class AlienDictionary {
     static Map<Character, Set<Character>> adjList;
     static Map<Character, Boolean> visited;
-    static Map<Character, Integer> arrival;
     static Map<Character, Integer> departure;
     static int timestamp = 0;
     static StringBuilder topsort;
@@ -20,7 +19,6 @@ public class AlienDictionary {
     public static String alienOrder(String[] words) {
         adjList = new HashMap<>();
         visited = new HashMap<>();
-        arrival = new HashMap<>();
         departure = new HashMap<>();
         topsort = new StringBuilder();
         // Add each character from words to adjList to identify unique letters as keys and build the graph
@@ -42,8 +40,6 @@ public class AlienDictionary {
                 if (curr.charAt(j) != next.charAt(j)) {
                     adjList.get(next.charAt(j)).add(curr.charAt(j));
                     break;
-                } else {
-                    continue;
                 }
             }
         }
@@ -60,7 +56,6 @@ public class AlienDictionary {
     }
 
     private static boolean DFS(Character node) {
-        arrival.put(node, timestamp++);
         visited.put(node, true);
         for (Character neighbor : adjList.get(node)) {
             if (visited.get(neighbor) == null) { // New node
