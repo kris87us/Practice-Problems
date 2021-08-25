@@ -23,7 +23,8 @@ public class CountSubsetsOfSizeK {
         }
         // DP case
         for (int row = 1; row <= n; row++) {
-            for (int col = 1; col <= k; col++) {
+            // Can avoid redundant computations by not computing till k, and making it MIN(row, k) since k > n doesn't make sense.
+            for (int col = 1; col <= Math.min(row, k); col++) {
                 table[row][col] = table[row - 1][col] + table[row - 1][col - 1];
             }
         }

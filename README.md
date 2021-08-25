@@ -167,7 +167,7 @@ Word Ladder II | graphs | bfs | [Problem](https://leetcode.com/problems/word-lad
 Alien Dictionary | graphs | dfs | [Problem](https://leetcode.com/problems/alien-dictionary) | [Solution](src/learn/graphs/AlienDictionary.java)
 Clone Graph / Reverse a Graph | graphs | bfs, dfs | [Problem]() | [Solution](src/learn/graphs/ReverseAGraph.java)
 
-## 📈 Graphs
+## 🎲 Dynamic Programming
 
 ### 🧩 Problems
 
@@ -176,3 +176,10 @@ Problem |DS |Algo |Link |Github
 Fibonacci | arrays | dp, tabulation, memoization | [Problem](https://leetcode.com/problems/fibonacci-number/) | [Solution](src/learn/dynamicprogramming/Fibonacci.java)
 Climbing Stairs | arrays | dp, tabulation, memoization | [Problem](https://leetcode.com/problems/climbing-stairs/) | [Solution](src/learn/dynamicprogramming/ClimbingStairs.java)
 Count Subsets of Size K | arrays | dp, tabulation | [Problem]() | [Solution](src/learn/dynamicprogramming/CountSubsetsOfSizeK.java)
+Unique Paths | arrays | dp, tabulation | [Problem](https://leetcode.com/problems/unique-paths/) | [Solution](src/learn/dynamicprogramming/UniquePaths.java)
+Unique Paths II | arrays | dp, tabulation | [Problem](https://leetcode.com/problems/unique-paths-ii/) | [Solution](src/learn/dynamicprogramming/UniquePathsII.java)
+Pascals Triangle | arraylist | dp, tabulation | [Problem](https://leetcode.com/problems/pascals-triangle/) | [Solution](src/learn/dynamicprogramming/PascalsTriangle.java)
+Pascals Triangle | arraylist | math, binomial coefficient | [Problem](https://leetcode.com/problems/pascals-triangle-ii/) | [Solution](src/learn/dynamicprogramming/PascalsTriangleII.java)
+Triangle | arraylist | dp, tabulation | [Problem](https://leetcode.com/problems/triangle/) | [Solution](src/learn/dynamicprogramming/Triangle.java)
+Minimum Falling Path | arrays | dp, tabulation | [Problem](https://leetcode.com/problems/minimum-falling-path-sum/) | [Solution](src/learn/dynamicprogramming/MinimumFallingPathSum.java)
+Word Break | strings | dp, tabulation | [Problem](https://leetcode.com/problems/word-break/) | [Solution](src/learn/dynamicprogramming/WordBreak.java)
