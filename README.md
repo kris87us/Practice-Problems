@@ -183,3 +183,8 @@ Pascals Triangle II | arraylist | math, binomial coefficient | [Problem](https:/
 Triangle | arraylist | dp, tabulation | [Problem](https://leetcode.com/problems/triangle/) | [Solution](src/learn/dynamicprogramming/Triangle.java)
 Minimum Falling Path | arrays | dp, tabulation | [Problem](https://leetcode.com/problems/minimum-falling-path-sum/) | [Solution](src/learn/dynamicprogramming/MinimumFallingPathSum.java)
 Word Break | strings | dp, tabulation | [Problem](https://leetcode.com/problems/word-break/) | [Solution](src/learn/dynamicprogramming/WordBreak.java)
+Paint House | arrays | dp, tabulation | [Problem](https://leetcode.com/problems/paint-house/) | [Solution](src/learn/dynamicprogramming/PaintHouse.java)
+Edit Distance | strings | dp, tabulation | [Problem](https://leetcode.com/problems/edit-distance/) | [Solution](src/learn/dynamicprogramming/EditDistance.java)
+Coin Change | arrays | dp, tabulation | [Problem](https://leetcode.com/problems/coin-change/) | [Solution]()
+Coin Change II | arrays | dp, tabulation | [Problem](https://leetcode.com/problems/coin-change-2/) |
+[Solution]()
