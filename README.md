@@ -188,3 +188,6 @@ Edit Distance | strings | dp, tabulation | [Problem](https://leetcode.com/proble
 Coin Change | arrays | dp, tabulation | [Problem](https://leetcode.com/problems/coin-change/) | [Solution]()
 Coin Change II | arrays | dp, tabulation | [Problem](https://leetcode.com/problems/coin-change-2/) |
 [Solution](src/learn/dynamicprogramming/CoinChangeII.java)
+Robbery | arrays | dp, tabulation | [Problem](https://leetcode.com/problems/house-robber/) | [Solution](src/learn/dynamicprogramming/Robbery.java)
+Knights Tour | arrays | dp, tabulation | [Problem](https://leetcode.com/problems/knight-dialer/) | [Solution](src/learn/dynamicprogramming/KnightTour.java)
+Count Ways to Climb N Stairs | arrays | dp, tabulation | [Problem]() | [Solution](src/learn/dynamicprogramming/CountWaysToClimbNStairs.java)
