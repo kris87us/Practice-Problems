@@ -3,7 +3,7 @@ package learn.recursion;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CombinationSum {
+public class CombinationSum_OR_SubsetSum {
     public static void main(String[] args) {
         System.out.println(combinationSum(new int[] { 2, 3, 5 }, 8));
     }

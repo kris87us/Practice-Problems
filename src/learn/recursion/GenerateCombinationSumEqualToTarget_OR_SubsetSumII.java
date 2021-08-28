@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class GenerateCombinationSumEqualToTarget {
+public class GenerateCombinationSumEqualToTarget_OR_SubsetSumII {
 
     public static void main(String[] args) {
         System.out.println(generate_all_combinations(new ArrayList<Integer>(Arrays.asList(1,2,3,4,5)), 5));
