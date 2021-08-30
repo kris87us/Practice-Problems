@@ -189,4 +189,6 @@ Coin Change | arrays | dp, tabulation | [Problem](https://leetcode.com/problems/
 Coin Change II | arrays | dp, tabulation | [Problem](https://leetcode.com/problems/coin-change-2/) | [Solution](src/learn/dynamicprogramming/CoinChangeII.java)
 Robbery | arrays | dp, tabulation | [Problem](https://leetcode.com/problems/house-robber/) | [Solution](src/learn/dynamicprogramming/Robbery.java)
 Knights Tour | arrays | dp, tabulation | [Problem](https://leetcode.com/problems/knight-dialer/) | [Solution](src/learn/dynamicprogramming/KnightTour.java)
-Count Ways to Climb N Stairs | arrays | dp, tabulation | [Problem]() | [Solution](src/learn/dynamicprogramming/CountWaysToClimbNStairs.java)
+Count Ways to Climb N Stairs | arrays | dp, tabulation | [Problem](https://www.techiedelight.com/find-total-ways-reach-nth-stair-with-atmost-m-steps/) | [Solution](src/learn/dynamicprogramming/CountWaysToClimbNStairs.java)
+Cut the Rope | arrays | dp, tabulation | [Problem](https://www.geeksforgeeks.org/cutting-a-rod-dp-13/) | [Solution](src/learn/dynamicprogramming/CutTheRope.java)
+Jump Game | arrays | dp, tabulation, fast naive solution | [Problem](https://leetcode.com/problems/jump-game/) | [Solution](src/learn/dynamicprogramming/JumpGame.java)

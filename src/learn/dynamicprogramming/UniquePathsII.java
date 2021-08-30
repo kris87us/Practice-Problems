@@ -4,6 +4,7 @@ public class UniquePathsII {
     public static void main(String[] args) {
         System.out.println(uniquePathsWithObstacles(new int[][] { { 0, 0, 0 }, { 0, 1, 0 }, { 0, 0, 0 } }));
         System.out.println(uniquePathsWithObstacles(new int[][] { { 0, 0 } }));
+        System.out.println(uniquePathsWithObstacles(new int[][] { { 0 }, {0} }));
     }
 
     // Bottom-up tabulation
@@ -39,12 +40,11 @@ public class UniquePathsII {
                 if (curr == 1) { // Check if there is obstacle, skip it
                     continue;
                 } else {
-                    table[row][col] = table[row - 1][col] + table[row][col - 1];
+                    table[row][col] = (table[row - 1][col] + table[row][col - 1]) % ( (int) Math.pow(10, 9) + 7);
                 }
             }
         }
 
-        return table[m - 1][n - 1];
+        return (table[m - 1][n - 1] % ( (int) Math.pow(10, 9) + 7));
     }
-
 }
