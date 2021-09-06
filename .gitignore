@@ -10,3 +10,6 @@ gen
 /.idea/
 /.gradle/
 /.history/
+src/learn/graphs/ShortestPathIn2DGridWithKeysAndDoors.java
+src/learn/graphs/TheMaze.java
+src/learn/graphs/ShortestPathCopied.java

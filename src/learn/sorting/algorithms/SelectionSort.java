@@ -1,11 +1,14 @@
 package learn.sorting.algorithms;
 
 import java.util.Arrays;
+
+import helper.Helper;
+
 // Time : O(n^2)
 // Space : O(1)
 public class SelectionSort {
     public static void main(String[] args) {
-        System.out.print(Arrays.toString(selectionSort(new int[]{3, 4, 5, 1, 2})));
+        System.out.print(Arrays.toString(selectionSort(new int[] { 3, 4, 5, 1, 2 })));
     }
 
     private static int[] selectionSort(int[] arr) {
@@ -16,9 +19,7 @@ public class SelectionSort {
                     min = j;
                 }
             }
-            int temp = arr[i];
-            arr[i] = arr[min];
-            arr[min] = temp;
+            Helper.swapArray(arr, i, min);
         }
         return arr;
     }

@@ -76,7 +76,6 @@ public class GraphValidTree {
         visited.set(source, true);
         for (int neighbor : adjList.get(source)) {
             if (visited.get(neighbor) == false) {
-                visited.set(neighbor, true);
                 parent.set(neighbor, source);
                 if (DFS(neighbor) == true) { // Found cycle, NOT a Tree
                     return true;

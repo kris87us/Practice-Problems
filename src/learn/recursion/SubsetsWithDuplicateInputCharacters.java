@@ -56,6 +56,7 @@ public class SubsetsWithDuplicateInputCharacters {
         // Loop through all the duplicates and send them down to the subordinate
         for (int c = 1;c <= count;c++) {
             partialSolution.append(subproblem[i]);
+            // i+count because my next subordinate has to skip all duplicates and look at next number, since I am processing the duplicates.
             helper(subproblem, i + count, partialSolution, result);
         }
         

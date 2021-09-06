@@ -7,12 +7,12 @@ import java.util.Arrays;
 public class InsertionSort {
     public static void main(String[] args) {
         int[] arr = new int[]{3, 4, 5, 1, 2};
-        System.out.print(Arrays.toString(insertionSort(arr)));
+        System.out.print(Arrays.toString(insertionSortIterative(arr)));
         System.out.print(Arrays.toString(insertionSortRecursive(arr, arr.length - 1)));
     }
 
     // ITERATIVE APPROACH
-    private static int[] insertionSort(int[] arr) {
+    private static int[] insertionSortIterative(int[] arr) {
         if (arr.length < 1) return arr;
 
         for (int i = 0; i <= arr.length - 1; i++) {

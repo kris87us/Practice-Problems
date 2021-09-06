@@ -71,10 +71,10 @@ Squares of a Sorted Array |arrays |sorting |[Problem](https://leetcode.com/probl
 Problem |DS |Algo |Link |Github
 --|--|--|--|--
 Letter Case Permutation |arrays, strings |combination and permutation, recursion |[Problem](https://leetcode.com/problems/letter-case-permutation/) |[Solution](https://github.com/kris87us/Practice-Problems/blob/main/src/learn/recursion/LetterCasePermutation_Mutable.java)
-Subsets |arrays |combination and permutation, recursion |[Problem](https://leetcode.com/problems/subsets/) |[Solution](https://github.com/kris87us/Practice-Problems/blob/main/src/learn/recursion/PrintSubsetsOfASetWithoutDuplicateElements.java)
+Subsets |arrays | combination and permutation, recursion |[Problem](https://leetcode.com/problems/subsets/) |[Solution](src/learn/recursion/SubsetsWithoutDuplicateInputIntegers.java)
 Permutation of Numbers |arrays |combination and permutation, recursion |[Problem](https://leetcode.com/problems/permutations/) |[Solution](https://github.com/kris87us/Practice-Problems/blob/main/src/learn/recursion/PrintPermutationsOfArrayWithDistinctIntegers.java)
 Permutations II |arrays |combination and permutation, recursion |[Problem](https://leetcode.com/problems/permutations-ii/) |[Solution](https://github.com/kris87us/Practice-Problems/blob/main/src/learn/recursion/PrintPermutationsOfArrayWithDuplicateIntegers.java)
-Subsets II |arrays |combination and permutation, recursion |[Problem](https://leetcode.com/problems/subsets-ii/) |[Solution](https://github.com/kris87us/Practice-Problems/blob/main/src/learn/recursion/PrintSubsetsOfASetWithDuplicateElements.java)
+Subsets II |arrays |combination and permutation, recursion |[Problem](https://leetcode.com/problems/subsets-ii/) |[Solution](src/learn/recursion/SubsetsWithDuplicateInputIntegers.java)
 Letter Combinations of a Phone Number |arrays |combination and permutation, recursion |[Problem](https://leetcode.com/problems/letter-combinations-of-a-phone-number) | [Solution](https://github.com/kris87us/Practice-Problems/blob/main/src/learn/recursion/WordsFromPhoneNumber.java)
 Combination Sum |arrays |backtracking, combination and permutation, recursion|[Problem](https://leetcode.com/problems/combination-sum/) |[Solution](https://github.com/kris87us/Practice-Problems/blob/main/src/learn/recursion/CombinationSum_OR_SubsetSum.java)
 Combination Sum II |arrays |backtracking, combination and permutation, recursion|[Problem](https://leetcode.com/problems/combination-sum-ii/) |[Solution](https://github.com/kris87us/Practice-Problems/blob/main/src/learn/recursion/GenerateCombinationSumEqualToTarget_OR_SubsetSumII.java)
@@ -93,10 +93,11 @@ N-Queens II| arrays | backtracking, recursion | [Problem](https://leetcode.com/p
 
 ### 🔨 Algorithms
 1. [Find Minimum & Maximum in a BST](src/learn/tree/algorithms/BST_FindMinimumAndMaximum.java)
-2. [Level Order Traversal / Breadth-First Search in a Binary Tree](src/learn/tree/algorithms/BT_LevelOrderTraversal.java)
-3. [Find Successor and Predecessor in a BST](src/learn/tree/algorithms/BST_Successor_Predecessor.java)
-4. [BST Insert a Node](src/learn/tree/algorithms/BST_Insertion.java)
-5. [BST Delete a Node](src/learn/tree/algorithms/BST_Delete.java)
+2. [Level Order Traversal / Breadth-First Search in a Binary Tree](src/learn/tree/algorithms/BT_BreadthFirstTraversal.java)
+3. [Depth-First Traversal](src/learn/tree/algorithms/BT_DepthFirstTraversal.java)
+4. [Find Successor and Predecessor in a BST](src/learn/tree/algorithms/BST_Successor_Predecessor.java)
+5. [BST Insert a Node](src/learn/tree/algorithms/BST_Insertion.java)
+6. [BST Delete a Node](src/learn/tree/algorithms/BST_Delete.java)
 
 ### 🧩 Problems
 

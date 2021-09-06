@@ -25,8 +25,8 @@ public class BST_Delete {
             }
         }
         // If root is null or node was not found
-        if (root == null)
-            return curr;
+        if (curr == null)
+            return root;
 
         // Case 1: If the node to be deleted is the leaf node
         if (curr.left == null && curr.right == null) {

@@ -2,6 +2,8 @@ package learn.sorting.algorithms;
 
 import java.util.Arrays;
 
+import helper.Helper;
+
 public class HeapSort {
     public static void main(String[] args) {
         int[] input = new int[] {5,4,6,7,8,1};
@@ -14,9 +16,10 @@ public class HeapSort {
         for (int i = (n/2)-1; i>=0; i--) {
             heapify(input, n, i);
         }
-        // Delete nodes (Extract max)
+        // Delete nodes (Extract max) 
+        // Needed for MIN HEAP
         for (int j = n - 1; j >= 0; j--) {
-            swap(input, 0, j);
+            Helper.swapArray(input, 0, j);
             heapify(input, j - 1, 0);
         }
     }
@@ -35,14 +38,8 @@ public class HeapSort {
         }
 
         if (largest != i) {
-            swap(arr, i, largest);
+            Helper.swapArray(arr, i, largest);
             heapify(arr, n, largest);
         }
-    }
-
-    private static void swap(int[] arr, int i, int j) {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
     }
 }

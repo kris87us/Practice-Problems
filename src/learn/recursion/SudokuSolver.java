@@ -24,7 +24,6 @@ public class SudokuSolver {
     }
 
     private static boolean helper(ArrayList<ArrayList<Integer>> board) {
-
         // Recursive case
         for (int row = 0; row < board.size(); row++) {
             for (int col = 0; col < board.get(0).size(); col++) {

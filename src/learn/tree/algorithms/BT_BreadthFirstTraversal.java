@@ -8,7 +8,7 @@ import models.TreeNodeJava;
 
 // Time: O(N)
 // Space: O(N)
-public class BT_LevelOrderTraversal {
+public class BT_BreadthFirstTraversal {
     public static void main(String[] args) {
         levelOrder(Helper.createBinaryTree());
     }

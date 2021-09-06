@@ -1,8 +1,14 @@
 package learn.sorting;
 
-import java.util.*;
+import static helper.Helper.pickRandom;
+import static helper.Helper.swapArray;
 
-import static helper.Helper.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.PriorityQueue;
 
 public class Top_K_Frequent_Elements {
 
@@ -54,7 +60,7 @@ public class Top_K_Frequent_Elements {
     public static ArrayList<Integer> find_top_k_frequent_elements(ArrayList<Integer> arr, Integer k) {
         // Write your code here.
         Map<Integer, Integer> map = new HashMap<>();
-        PriorityQueue<Integer> queue = new PriorityQueue<>(k, Comparator.comparingInt(map::get));
+        PriorityQueue<Integer> queue = new PriorityQueue<>(k, Comparator.comparingInt((a) -> map.get(a)));
         for (Integer n : arr) {
             map.put(n, map.getOrDefault(n, 0) + 1);
         }
@@ -68,6 +74,6 @@ public class Top_K_Frequent_Elements {
     }
 
     public static void main(String[] args) {
-        System.out.print(find_top_k_quickselect(new ArrayList<>(Arrays.asList(1, 1, 1, 2, 2, 3)), 2));
+        System.out.print(find_top_k_frequent_elements(new ArrayList<>(Arrays.asList(1, 2, 3, 2, 4, 3, 1)), 2));
     }
 }

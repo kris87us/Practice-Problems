@@ -1,12 +1,16 @@
 package learn.sorting;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
 
 // Time: O(n)
 // Space: O(n)
 public class Kth_Largest_In_Array {
     public static void main(String[] args) {
-        System.out.print(kth_largest_in_an_array(new ArrayList<>(Arrays.asList(4, 5, 1, 2, 9)), 3));
+        System.out.print(kth_largest_in_an_array(new ArrayList<>(Arrays.asList(4, 5, 5, 1, 2, 9)), 3));
     }
 
     public static int kth_largest_in_an_array(List<Integer> numbers, int k) {
